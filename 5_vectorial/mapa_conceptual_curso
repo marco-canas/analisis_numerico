@@ -1,0 +1,77 @@
+// Mapa Conceptual Curso Cálculo Vectorial
+digraph {
+	graph [nodesep=0.5 rankdir=TB splines=ortho]
+	node [fillcolor=lightgoldenrodyellow shape=box style="rounded,filled"]
+	edge [arrowsize=0.7]
+	A [label="Cálculo Vectorial y de Varias Variables
+para Ingeniería Agropecuaria" fillcolor=lightblue shape=doubleoctagon]
+	B [label="Enfoques Pedagógicos
+(Flipped Learning, STEAMS, ABPP)"]
+	C [label="Capítulos y Contenidos"]
+	D [label="Proyectos Integradores"]
+	E [label="Recursos Tecnológicos"]
+	F [label="Evaluación"]
+	G [label="Formación Integral
+(Ética, Estética, Lógica, Política)"]
+	A -> B
+	A -> C
+	A -> D
+	A -> E
+	A -> F
+	A -> G
+	B1 [label="Aprendizaje Invertido
+(Videos YouTube + GitHub previo a clase)"]
+	B2 [label="STEAMS
+(Arte anamórfico, Hiperboloides)"]
+	B3 [label="ABPP
+(Proyectos con Python y GitHub)"]
+	B -> B1
+	B -> B2
+	B -> B3
+	C1 [label="10: Cónicas/Coordenadas Polares"]
+	C2 [label="11: Vectores en el Espacio"]
+	C3 [label="12: Funciones Vectoriales"]
+	C4 [label="13: Funciones Multivariables"]
+	C5 [label="14: Integración Múltiple"]
+	C6 [label="15: Análisis Vectorial"]
+	C -> C1
+	C -> C2
+	C -> C3
+	C -> C4
+	C -> C5
+	C -> C6
+	D1 [label="Cicloides (Cap.10)
+Modelado trayectorias siembra"]
+	D2 [label="Arte Anamórfico (Cap.10)
+Visualización geoespacial"]
+	D3 [label="Flora Silvestre (Cap.13)
+Modelado 3D especies"]
+	D4 [label="Hiperboloide (Cap.15)
+Diseño estructuras"]
+	D -> D1
+	D -> D2
+	D -> D3
+	D -> D4
+	E1 [label="Python
+(NumPy, SymPy, Matplotlib)"]
+	E2 [label="Jupyter Notebooks
+(Google Colab, VS Code)"]
+	E3 [label="GitHub
+(Repositorio colaborativo)"]
+	E4 [label="LaTeX/Markdown
+(Documentación científica)"]
+	E -> E1
+	E -> E2
+	E -> E3
+	E -> E4
+	C1 -> D1
+	C1 -> D2
+	C4 -> D3
+	C6 -> D4
+	B1 -> E3
+	B2 -> E1
+	B3 -> E3
+	E1 -> D1
+	E3 -> D4
+	E4 -> F
+}

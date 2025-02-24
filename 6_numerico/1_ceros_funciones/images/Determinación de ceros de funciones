@@ -1,0 +1,17 @@
+digraph {
+	A [label="Determinación de ceros de funciones" fillcolor=lightblue shape=box style=filled]
+	B [label="Método de la Bisección"]
+	C [label="Método de Newton-Raphson"]
+	D [label="Método de la Secante"]
+	E [label="Implementación en Python"]
+	F [label="Visualización y Animaciones"]
+	G [label="Interactividad con ipywidgets"]
+	A -> B
+	A -> C
+	A -> D
+	A -> E
+	A -> F
+	A -> G
+	E -> F [label="Gráficos con matplotlib y plotly"]
+	F -> G [label="Exploración interactiva"]
+}

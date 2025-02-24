@@ -1,0 +1,56 @@
+---
+title: "Unidad 2: Derivadas y Campos Vectoriales"
+author: "Facultad de Ciencias Agrarias, Ingeniería Agropecuaria"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introducción a la Unidad
+
+En esta unidad, se profundizará en el concepto de derivadas vectoriales y su aplicación en el análisis de campos vectoriales. Se buscará relacionar estos conceptos con fenómenos del agro colombiano, como el estudio de flujos de agua y distribuciones de nutrientes.
+
+# Objetivos de Aprendizaje
+
+1. Comprender el concepto de derivadas vectoriales y su relación con el cambio.
+2. Analizar campos vectoriales y determinar su importancia en problemas agrícolas.
+3. Aplicar las herramientas computacionales para modelar y visualizar campos vectoriales.
+
+# Contenidos
+
+## Tema 1: Derivadas Vectoriales
+- Concepto de derivada vectorial.
+- Gradiente, divergencia y rotacional.
+- Interpretación geométrica y física.
+
+## Tema 2: Campos Vectoriales
+- Introducción a los campos vectoriales.
+- Representación y visualización en 2D y 3D.
+- Aplicaciones en el flujo de agua y transporte de nutrientes.
+
+## Tema 3: Aplicaciones en Ingeniería Agropecuaria
+- Modelado de corrientes de río y sistemas de drenaje.
+- Análisis de distribuciones de fertilizantes.
+- Simulaciones de movimiento de fluidos en terrenos agrícolas.
+
+# Metodología
+
+La metodología para esta unidad se enfocará en:
+
+1. **Material Audiovisual:** Videos explicativos sobre derivadas y campos vectoriales.
+2. **Ejercicios Computacionales:** Resolución de problemas utilizando Python y Jupyter Notebooks.
+3. **Proyectos Prácticos:** Simulaciones basadas en datos reales del IDEAM.
+
+# Recursos
+
+- **Python:** Uso de bibliotecas como SymPy y Plotly para cálculo simbólico y visualización.
+- **Cuadernos Jupyter:** Actividades guiadas para experimentación interactiva.
+- **Datos Reales:** Ejercicios con información meteorológica y de suelos del Bajo Cauca.
+
+# Evaluación
+
+- **Ejercicios Individuales:** Resolución de problemas relacionados con derivadas y campos vectoriales (30%).
+- **Mini-proyecto:** Modelado de flujos de agua o distribuciones de nutrientes usando Python (40%).
+- **Participación Activa:** Discusión y entrega de tareas previas a las clases (30%).
+
+---
+
