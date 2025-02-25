@@ -81,7 +81,7 @@ Cargo
 
 
 Tarea 1
-Cada estudiante realiza 5 videos de los métodos de integración numérica  
+Cada estudiante realiza 5 videos de los métodos de integración numérica  (Primer semana de marzo) 
 
 
 
