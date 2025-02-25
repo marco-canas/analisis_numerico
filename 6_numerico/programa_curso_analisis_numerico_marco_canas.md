@@ -77,5 +77,11 @@ Aprobado en Acta Número: ___, Fecha: ___
 
 **Nombre Completo del Secretario**  
 Firma  
-Cargo
+Cargo   
+
+
+Tarea 1
+Cada estudiante realiza 5 videos de los métodos de integración numérica  
+
+
 
