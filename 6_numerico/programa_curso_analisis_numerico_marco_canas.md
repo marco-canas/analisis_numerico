@@ -68,7 +68,8 @@ La evaluación se basará en:
 - [Desarrollo del pensamiento variacional](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://repositorio.udes.edu.co/server/api/core/bitstreams/c1412f81-0ada-4dda-bec0-70e9657396ce/content)
 
 ## COMUNIDAD ACADÉMICA QUE PARTICIPÓ EN LA ELABORACIÓN DEL MICROCURRÍCULO
-- **Marco Julio**  
+- **Marco Julio Cañas Campillo**
+   
 **Unidad Académica:** Facultad de Educación  
 **Formación Académica:** Licenciado en Matemáticas y Física, M.Sc. en Ciencias Matemáticas  
 
@@ -77,5 +78,13 @@ Aprobado en Acta Número: ___, Fecha: ___
 
 **Nombre Completo del Secretario**  
 Firma  
-Cargo
+Cargo   
+
+  
+# Tarea de exposición   
+
+Tarea 1
+Cada estudiante realiza 5 videos de los métodos de integración numérica  (Primer semana de marzo) 
+
+
 
