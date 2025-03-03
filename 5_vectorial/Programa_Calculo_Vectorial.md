@@ -82,3 +82,17 @@
 |  | Nombre Completo Secretario del Consejo de la Unidad Académica |  | Firma | Firma | Firma |  | Cargo |  |
 |  |  |  |  |  |  |  |  |  |
 
+
+# Gestión de las tareas
+
+1. Tarea: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la elipse se transforme en circunferencia. (Semana 5- Marzo 10 al 15)
+
+# Gestión de quices
+1. Semana 5 (Marzo 10 al 15). Sobre Elipse y parábola
+# Gestión de parciales.
+1. Semana 6 (Marzo 17 al 22). Sobre Elipse y parábola, hipérbola.
+   
+# Gestión de proyectos
+
+1. Preyecto de construcción de una antena parabólica (Semana 6 (Marzo 17 al 22).)
+
