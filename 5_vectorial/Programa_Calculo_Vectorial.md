@@ -82,3 +82,15 @@
 |  | Nombre Completo Secretario del Consejo de la Unidad Académica |  | Firma | Firma | Firma |  | Cargo |  |
 |  |  |  |  |  |  |  |  |  |
 
+
+# Gestión de las tareas
+
+1. Tarea: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la elipse se transforme en circunferencia. (Semana 5- Marzo 10 al 15)
+
+# Gestión de quices
+
+# Gestión de parciales.
+
+# Gestión de proyectos
+
+
