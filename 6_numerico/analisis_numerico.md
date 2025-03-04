@@ -68,3 +68,7 @@ Aprobado en Acta Número: ___, Fecha: ___
 **Nombre Completo del Secretario**  
 Firma  
 Cargo  
+
+
+# Gestión de las tareas  
+
