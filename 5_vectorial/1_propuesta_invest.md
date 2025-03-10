@@ -1,4 +1,4 @@
-**Thinking sobre la Estructura del Curso de Cálculo Vectorial como Investigación Educativa**  
+**la Estructura del Curso de Cálculo Vectorial como Investigación Educativa**  
 
 ### **1. Contexto y Justificación**  
 - **Necesidad identificada**:  
@@ -16,7 +16,7 @@
 
 ### **2. Objetivos de la Investigación**  
 - **Objetivo General**:  
-  Evaluar el impacto de la implementación combinada de Aula Invertida, STEAMS y ABPP en el desarrollo del pensamiento matemático aplicado de estudiantes de Ingeniería Agropecuaria, mediante el uso de Jupyter Notebooks y recursos digitales.  
+  Evaluar el impacto de la implementación combinada de Aula Invertida, STEAMS y ABPP en el desarrollo del pensamiento matemático aplicado a problemas del sector agropecuario en Caucasia, de estudiantes de Ingeniería Agropecuaria, mediante el uso de Jupyter Notebooks y recursos digitales.  
 
 - **Objetivos Específicos**:  
   1. Medir la mejora en competencias técnicas (cálculo vectorial, análisis de datos) y habilidades blandas (trabajo en equipo, creatividad).  
@@ -50,8 +50,8 @@
 ### **4. Estructura del Curso (Integrando los Enfoques)**  
 #### **Módulo 1: Fundamentos de Cálculo Vectorial (Aula Invertida)**  
 - **Recursos**:  
-  - Videos en [DIMathData](https://youtube.com/@DIMathData) explicando conceptos teóricos (ej: gradiente, divergencia).  
-  - Cuadernos Jupyter en GitHub con ejemplos básicos (hipervínculo a Colab para edición).  
+  - Videos en [DIMathData](https://www.youtube.com/@DiMathData) explicando conceptos teóricos (ej: gradiente, divergencia).  
+  - Cuadernos Jupyter en [GitHub](https://github.com/marco-canas/radicacion_calculo_vectorial_analisis_numerico/tree/main/5_vectorial) con ejemplos básicos (hipervínculo a Colab para edición).  
 - **Actividad**:  
   - Antes de clase: Ver videos + resolver ejercicios interactivos en Jupyter.  
   - En clase: Discusión de dudas + mini-retos aplicados (ej: calcular gradiente de pH en un cultivo).  
@@ -111,4 +111,4 @@
 ### **8. Conclusión**  
 Este enfoque busca transformar la enseñanza del cálculo vectorial en un **laboratorio de innovación agropecuaria**, donde los estudiantes no solo aprenden matemáticas, sino que las aplican para resolver problemas reales de Colombia. La combinación de pedagogías activas y herramientas digitales podría ser un modelo replicable en otras universidades con contextos similares.  
 
-**¡Manos a la obra!** ¿Necesitas ayuda para diseñar un proyecto ABPP específico o estructurar un cuaderno Jupyter?
+
