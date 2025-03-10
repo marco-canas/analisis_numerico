@@ -1,4 +1,8 @@
 
+# Promt para el diseño del programa desde un enfoque investigativo  
+
+Ayúdame a estructurar el curso de "Cálculo Vectorial" que estoy brindando a mis estudiantes de Ingeniería Agropecuaria del Campus Caucasia de la Universidad de Antioquia. La estructura que quiero para el curso es la de una investigación educativa en la que busque describir el impacto durante la formación de estos estudiantes de la implementación de tres enfoques pedagógicos a saber: "Aula Invertida", "STEAMS" y de "Aprendizaje Basado en Problemas y Proyectos (ABPP)" para la formación de los futuros ingenieros. Pues considero que estos enfoques favorecen la formación de ingenieros en cuanto a su desarrollo del pensamiento matemático aplicado a los problemas que la Ingeniería agropecuaria en Colombia, necesita resolver. Yo busco formar a los ingenieros en competencias que la empresa privada requiere. Pues considero que la empresa privada requiere que el ingeniero tenga competencias en medición, Análisis de datos para la toma de decisiones informada y cálculo diferencial, integral, vectorial y de varias variables, específicamente aplicado a la solución de problemas de desarrollo del agro Colombiano.
+
 
 # PROGRAMA OFICIAL DE CURSO (Pregrado y Posgrado) 
 
