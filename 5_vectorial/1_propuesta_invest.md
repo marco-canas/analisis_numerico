@@ -1,4 +1,4 @@
-**Thinking sobre la Estructura del Curso de Cálculo Vectorial como Investigación Educativa**  
+**la Estructura del Curso de Cálculo Vectorial como Investigación Educativa**  
 
 ### **1. Contexto y Justificación**  
 - **Necesidad identificada**:  
