@@ -1,13 +1,14 @@
 
 
-|  | PROGRAMA OFICIAL DE CURSO (Pregrado y Posgrado) |
-| --- | --- |
-|  | UNIVERSIDAD DE ANTIOQUIA |
+# PROGRAMA OFICIAL DE CURSO (Pregrado y Posgrado) 
 
-| INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL | INFORMACIÓN GENERAL |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Unidad Académica: | Unidad Académica: | Unidad Académica: |
-| Programa académico al que pertenece: | Programa académico al que pertenece: | Programa académico al que pertenece: | Programa académico al que pertenece: |
+## UNIVERSIDAD DE ANTIOQUIA 
+
+# INFORMACIÓN GENERAL 
+## Unidad Académica: Facultad de Educación  
+
+### Programa académico al que pertenece:   
+
 | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: | Programa(s) académico(s) a los cuales se ofrece el curso: |
 | Vigencia: | Código curso: | 5009344 | 5009344 |
 | Nombre del curso: | Nombre del curso: | Nombre del curso: |
