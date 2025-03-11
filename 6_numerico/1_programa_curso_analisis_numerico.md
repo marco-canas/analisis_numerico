@@ -71,20 +71,26 @@ La evaluación se basará en:
 - **Marco Julio Cañas Campillo**
    
 **Unidad Académica:** Facultad de Educación  
-**Formación Académica:** Licenciado en Matemáticas y Física, M.Sc. en Ciencias Matemáticas  
+**Formación Académica:** Licenciado en Matemáticas y Física,  
+  M.Sc. en Ciencias Matemáticas  
 
 ## APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA
 Aprobado en Acta Número: ___, Fecha: ___
 
-**Nombre Completo del Secretario**  
-Firma  
-Cargo   
 
+
+  
   
 # Tarea de exposición   
 
-Tarea 1
-Cada estudiante realiza 5 videos de los métodos de integración numérica  (Primer semana de marzo) 
+## Tarea 1
+Cada estudiante realiza 5 videos de los métodos de integración numérica de manera manuscrita en tablero físico o tablero digital  (Última semana de marzo)   
+
+## Tarea 2
+Cada estudiante realiza 5 videos de los métodos de integración numérica Utilizando recursos TIC's  (Última semana de marzo)     
+
+
+
 
 
 
