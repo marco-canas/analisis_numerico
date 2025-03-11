@@ -60,12 +60,34 @@ La evaluación se basará en:
 - **Exposiciones y defensa de proyectos (30%)**
 - **Examen final (30%)**
 
-## BIBLIOGRAFÍA  
-- [CALCULO I DE UNA VARIABLE Ron Larson-Bruce Edwards. Mc Graw Hill. 9º Edición](https://www.academia.edu/42139251/CALCULO_I_DE_UNA_VARIABLE_Ron_Larson_Bruce_Edwards_Mc_Graw_Hill_9o_Edici%C3%B3n)
-- Burden, R. L., & Faires, J. D. (2011). *Numerical Analysis*. Cengage Learning.
-- Chapra, S. C., & Canale, R. P. (2015). *Numerical Methods for Engineers*. McGraw-Hill.
-- Suli, E., & Mayers, D. (2003). *An Introduction to Numerical Analysis*. Cambridge University Press.
-- [Desarrollo del pensamiento variacional](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://repositorio.udes.edu.co/server/api/core/bitstreams/c1412f81-0ada-4dda-bec0-70e9657396ce/content)
+### **Referentes en Didáctica de la Matemática y Pensamiento Computacional**  
+*(Ordenados según normas APA 7ᵃ edición)*  
+
+---
+
+1. **Boaler, J.** (2016). *Mathematical Mindsets: Unleashing Students’ Potential through Creative Math, Inspiring Messages and Innovative Teaching*. Jossey-Bass.  
+   - **Relación con la clase**: Su enfoque en el aprendizaje basado en proyectos (ABPP) y la mentalidad de crecimiento refuerza la integración de STEAMS y la resolución de problemas agropecuarios.  
+
+2. **Duval, R.** (1999). *Semiosis y pensamiento humano: Registros semióticos y aprendizajes intelectuales*. Peter Lang.  
+   - **Relación con la clase**: Su teoría sobre los cambios de representación (geométrica, algebraica, verbal) fundamenta cómo los estudiantes comprenden el método del trapecio a través de múltiples registros (gráficos, lenguaje natural, código).  
+
+3. **Mazur, E.** (1997). *Peer Instruction: A User’s Manual*. Prentice Hall.  
+   - **Relación con la clase**: El aula invertida se nutre de su metodología de aprendizaje activo mediante discusiones y retroalimentación entre pares.  
+
+4. **Papert, S.** (1980). *Mindstorms: Children, Computers, and Powerful Ideas*. Basic Books.  
+   - **Relación con la clase**: Su visión del aprendizaje construccionista (usar código Python para explorar matemáticas) justifica el uso de Jupyter Notebooks como herramienta pedagógica.  
+
+5. **Wing, J. M.** (2006). Computational thinking. *Communications of the ACM, 49*(3), 33-35. https://doi.org/10.1145/1118178.1118215  
+   - **Relación con la clase**: Su marco del pensamiento computacional (descomposición, abstracción, algoritmos) guía la implementación del método del trapecio en Python.  
+
+---
+
+### **Alineación con la Propuesta Didáctica**  
+- **Duval**: Explica cómo los cambios de representación (gráfico ↔ verbal ↔ algebraico) evitan obstáculos epistemológicos en la comprensión del trapecio.  
+- **Wing**: Legitima el uso de algoritmos (Python) como parte del pensamiento crítico necesario en ingeniería agropecuaria.  
+- **Boaler y Mazur**: Validan las estrategias activas (ABPP, aula invertida) para fomentar la creatividad y la colaboración.  
+- **Papert**: Respalda la integración de tecnología (Jupyter) como medio para construir conocimiento matemático significativo.  
+
 
 ## COMUNIDAD ACADÉMICA QUE PARTICIPÓ EN LA ELABORACIÓN DEL MICROCURRÍCULO
 - **Marco Julio Cañas Campillo**
