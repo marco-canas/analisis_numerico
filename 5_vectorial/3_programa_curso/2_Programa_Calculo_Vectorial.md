@@ -84,7 +84,7 @@ Ayúdame a estructurar el curso de "Cálculo Vectorial" que estoy brindando a mi
 |  |  |  |  |
 |  |  |  |  |
 
-| APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA | APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA |
+| APROBACIÓN DEL CONSEJO DE UNIDAD ACADÉMICA |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del | Aprobado en Acta del |
 |  |  |  |  |  |  |  |  |  |
@@ -94,12 +94,17 @@ Ayúdame a estructurar el curso de "Cálculo Vectorial" que estoy brindando a mi
 
 # Gestión de las tareas
 
-1. Tarea: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la elipse se transforme en circunferencia. (Semana 5- Marzo 10 al 15)
-2. Tarea 2: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la Hipérbola cambie a... (Semana 6 - Marzo 17 al 22)
-3. 
+1. Tarea 1: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la elipse se transforme en circunferencia. (Semana 5- Marzo 10 al 15)
+2. Tarea 2: Hacer el video de la animación en GeoGebra de cómo el acercar los focos hace que la Hipérbola cambie a...
+   (Semana 6 - Marzo 17 al 22)
+4. Tarea 3: Video de cómo trazar una circunferencia con Geogebra a partir de la ecuación canónica o de la ecuación general o
+   del centro y un punto de ella. (Semana 7 - Marzo 25 a 31)
+   
 
 # Gestión de quices
 1. Semana 5 (Marzo 10 al 15). Sobre Elipse y parábola
+2. Quiz 2 Semana 
+   
 # Gestión de parciales.
 1. Semana 6 (Marzo 17 al 22). Sobre Elipse y parábola, hipérbola.
    
