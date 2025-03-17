@@ -1,0 +1,3 @@
+### Posibles Retos
+
+- Resistencia al cambio pedagógico...
