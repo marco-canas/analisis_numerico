@@ -109,6 +109,14 @@
 ---
 
 ### **8. Conclusión**  
-Este enfoque busca transformar la enseñanza del cálculo vectorial en un **laboratorio de innovación agropecuaria**, donde los estudiantes no solo aprenden matemáticas, sino que las aplican para resolver problemas reales de Colombia. La combinación de pedagogías activas y herramientas digitales podría ser un modelo replicable en otras universidades con contextos similares.  
+Este enfoque busca transformar la enseñanza del cálculo vectorial en un **laboratorio de innovación agropecuaria**, donde los estudiantes no solo aprenden matemáticas, sino que las aplican para resolver problemas reales de Colombia. La combinación de pedagogías activas y herramientas digitales podría ser un modelo replicable en otras universidades con contextos similares.   
+
+# Gestión de la evaluación
+
+## Parciales
+
+1. Parcial Uno: 31 de marzo a las 10 de la mañana, sobre secciones cónicas.
+2. 
+
 
 
