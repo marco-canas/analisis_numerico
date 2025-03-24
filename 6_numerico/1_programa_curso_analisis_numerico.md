@@ -114,6 +114,9 @@ Cada estudiante realiza 5 videos de los métodos de integración numérica Utili
 
 # Normatividad en cuanto a la entrega de Tareas y proyectos y Presentación de parciales  
 
+1. Toda actividad evaluativa tiene fecha límite de entrega o realización.
+2. La entrega sin encusa válida por el reglamento estudiantil de nuestra Universidad de Antioquia, se califica sobre 3 (Siempre que entregue entes de una semana después de la fecha límite)
+
 
 
 
