@@ -112,6 +112,9 @@ Cada estudiante realiza 5 videos de los métodos de integración numérica de ma
 Cada estudiante realiza 5 videos de los métodos de integración numérica Utilizando recursos TIC's  (Última semana de marzo)     
 
 
+# Normatividad en cuanto a la entrega de Tareas y proyectos y Presentación de parciales  
+
+
 
 
 
