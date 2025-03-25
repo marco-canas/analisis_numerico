@@ -1,4 +1,5 @@
-**Diseño de Investigación Educativa bajo la Metodología de Investigación Acción Educativa**  
+
+# **Diseño de Investigación Educativa bajo la Metodología de Investigación Acción Educativa**  
 **Título:** *Impacto de un enfoque multimodal (representaciones de Duval + ABPP + STEAMS + Aula Invertida) en la enseñanza de integración numérica y desarrollo de competencias docentes.*  
 
 ---
@@ -93,4 +94,4 @@
 - **Rúbricas:** Para evaluar competencias docentes y proyectos STEAMS.  
 - **Consentimiento informado:** Garantizar ética en la investigación.  
 
-Este diseño integra los elementos de la estructura de carpetas proporcionada y aborda la hipótesis desde un enfoque cíclico, reflexivo y basado en evidencia, propio de la Investigación Acción Educativa.
+Este diseño integra los elementos de la estructura de carpetas proporcionada y aborda la hipótesis desde un enfoque cíclico, reflexivo y basado en evidencia, propio de la Investigación Acción Educativa (IAE).
