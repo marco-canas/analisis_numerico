@@ -29,8 +29,8 @@
 ---
 
 ### **3. Implementación (Acción)**  
-**Ciclo 1: Algoritmos básicos (4 semanas)**  
-- **Temas:** Sumas Riemann, Trapecios (carpetas 4-7).  
+**Ciclo 1: Algoritmos básicos (8 semanas)**  
+- **Temas:** Interpolación, Ceros de funciones, Derivación Numérica, Sumas Riemann, Trapecios (carpetas 4-7).  
 - **Actividades:**  
   - **Aula Invertida:** Estudiantes revisan videos/Jupyter antes de clase.  
   - **Clase presencial:** Resolución de problemas reales (ABPP) usando las 4 representaciones.  
