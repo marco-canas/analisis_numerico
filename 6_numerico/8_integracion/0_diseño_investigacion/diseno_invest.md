@@ -1,5 +1,6 @@
 
-# **Diseño de Investigación Educativa bajo la Metodología de Investigación Acción Educativa**  
+# **Diseño de Investigación Educativa bajo la Metodología de Investigación Acción Educativa**    
+
 **Título:** *Impacto de un enfoque multimodal (representaciones de Duval + ABPP + STEAMS + Aula Invertida) en la enseñanza de integración numérica y desarrollo de competencias docentes.*  
 
 ---
