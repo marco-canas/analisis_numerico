@@ -15,6 +15,10 @@ Cómo instala R para análisis de datos en Ingeniría Agropecuaria.
 
 Cómo cambiar la excentricidad de la elipse al cambiar la distancia entre focos con GeoGebra. A través de un video. 
 
+## Tarea opcional (Sobre duplicar, cuadriplicar y octiplicar una caja en ingeniería agrpopecuaria)
+
+Tiene que ver con el encilage. 
+
 
 
 # Gestión de la notas del curso
