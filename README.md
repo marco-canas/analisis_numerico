@@ -6,7 +6,12 @@ Tha best of Both J. Worlds
 Reading to Rick Scavetta
 Boyan Angelov
 
-# Gestión de la nostas del curso
+# Descripción de la tarea 
+
+
+
+
+# Gestión de la notas del curso
 
 ## Tareas
 
