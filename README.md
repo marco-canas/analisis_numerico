@@ -23,6 +23,7 @@ Cómo cambiar la excentricidad de la elipse al cambiar la distancia entre focos 
 
 Tiene que ver con el encilage. 
 
+# Parcial 1 Fecha límite. 1 de abril. Video con el patrón de riego hiperbólico. 
 
 
 # Gestión de la notas del curso
