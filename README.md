@@ -10,4 +10,6 @@ Boyan Angelov
 
 ## Tareas
 
-* Tarea 1 Video instalación R 6 de abril.
+* Tarea 1 Video instalación R 6 de abril. (Se califica sobre 3.0)
+
+* 
