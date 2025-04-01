@@ -23,7 +23,7 @@
   - **Algebraica (A):** Deducción de fórmulas en clase (carpeta 7: *suma_trapecios*).  
 - **Metodologías:**  
   - **Aula Invertida:** Videos en YouTube + Cuadernos Jupyter (carpeta 11).  
-  - **STEAMS:** Proyectos con Python (carpetas 9-10: *proyecto_prob_lluvia*, *proyecto_prob_temperature*).  
+  - **STEAMS:** Proyectos con Python, Hojas de Cálculo (Excel, Sheets, GeoGebra) (carpetas 9-10: *proyecto_prob_lluvia*, *proyecto_prob_temperature*).  
   - **ABPP:** Problemas reales (ej: predecir inundaciones usando integrales, carpeta 9).  
 
 ---
@@ -54,7 +54,7 @@
 **Instrumentos:**  
 - **Cuantitativos:**  
   - Puntajes en proyectos (carpetas 9-10) y exámenes (carpeta 14).  
-  - Análisis de código Python (calidad y precisión).  
+  - Análisis de código Python, Análisis del archivo .ggb y del archivo .xlsx (calidad y precisión).  
 - **Cualitativos:**  
   - Diarios de reflexión estudiantil (carpeta 12: *tareas*).  
   - Grabaciones de clases y presentaciones.  
