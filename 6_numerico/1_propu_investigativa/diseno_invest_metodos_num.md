@@ -1,6 +1,6 @@
 # **Diseño de Investigación Educativa bajo la Metodología de Investigación Acción Educativa**    
 
-**Título:** *Impacto de un enfoque multimodal (representaciones de Duval + ABPP + STEAMS + Aula Invertida) en la enseñanza de Los Métodos Numéticos en Cálculo y desarrollo de competencias docentes de futuros Licenciados en Matemáticas de la Facultad de Educación de La Universidad de Antioquia Campus Caucasia.*  
+**Título:** *Impacto de un enfoque multimodal (representaciones de Duval + ABPP + STEAMS + Aula Invertida), implementado con cuadernos Jupyter y lenguaje Python, en la enseñanza de Los Métodos Numéticos en Cálculo y desarrollo de competencias docentes de futuros Licenciados en Matemáticas de la Facultad de Educación de La Universidad de Antioquia Campus Caucasia.*  
 
 ---
 
