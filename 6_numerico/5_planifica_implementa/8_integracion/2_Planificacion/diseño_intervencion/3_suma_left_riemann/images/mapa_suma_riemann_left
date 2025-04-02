@@ -1,0 +1,20 @@
+digraph {
+	A [label="Método numérico de integración
+(Suma de Riemann izquierda)" fillcolor=lightblue shape=box style=filled]
+	B [label="Pensamiento Variacional" fillcolor=lightyellow shape=ellipse style=filled]
+	C [label="Pensamiento Computacional" fillcolor=lightgreen shape=ellipse style=filled]
+	D [label="Pensamiento Algorítmico" fillcolor=lightcoral shape=ellipse style=filled]
+	E [label="Escritura Verbal del Algoritmo" fillcolor=lightgrey shape=parallelogram style=filled]
+	F [label="Pseudocódigo" fillcolor=lightpink shape=parallelogram style=filled]
+	G [label="Implementación en Python" fillcolor=lightskyblue shape=parallelogram style=filled]
+	H [label="Pruebas de Escritorio" fillcolor=orange shape=diamond style=filled]
+	I [label="Visualización con Animaciones" fillcolor=cyan shape=diamond style=filled]
+	A -> B [label=" Relación con" color=black]
+	A -> C [label=" Relación con" color=black]
+	A -> D [label=" Relación con" color=black]
+	D -> E [label=" Desarrollo" color=blue]
+	E -> F [label=" Traducción" color=purple]
+	F -> G [label=" Codificación" color=green]
+	G -> H [label=" Validación" color=red]
+	G -> I [label=" Experimentación" color=darkblue]
+}
