@@ -62,10 +62,10 @@ Aquí tienes una **secuencia detallada** para implementar paso a paso el método
 ---
 
 #### **5. Calcular áreas bajo parábolas (Regla de Simpson)**  
-- **Fórmula para \( n=2 \)** (1 parábola por subintervalo):  
-  \[
+- **Fórmula para $ n=2 $** (1 parábola por subintervalo):  
+  $$
   \text{Área} = \frac{h}{3} \left( f(x_0) + 4f(x_1) + f(x_2) \right)
-  \]
+  $$
 - **En GeoGebra**:  
   ```geogebra
   h = (b - a) / n
@@ -80,7 +80,7 @@ Aquí tienes una **secuencia detallada** para implementar paso a paso el método
   from scipy.integrate import quad
   result, _ = quad(lambda x: np.exp(x**2), 0, 1)
   ```
-  *Resultado*: \( \approx 1.46265 \).  
+  *Resultado*: $ \approx 1.46265 $.  
 - **En GeoGebra**:  
   ```geogebra
   ValorExacto = 1.46265
