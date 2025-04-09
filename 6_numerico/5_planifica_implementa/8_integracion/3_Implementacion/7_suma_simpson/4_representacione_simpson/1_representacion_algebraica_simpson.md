@@ -52,3 +52,6 @@
 --- 
 
 Esta actividad refuerza que la **investigación acción es un proceso co-construido**, donde las emociones son guías, no obstáculos. ¡Mucho éxito en tu práctica!
+
+# Ahora si, Diseñemos la actividad de enseñanza de la representación algebraica de los 5 métodos de integración numérica que hemos visto. 
+
