@@ -1,0 +1,17 @@
+title: "Análisis Numérico"
+author: "Marco Cañas"
+logo: images/logo_analisis_numerico.png
+
+# Añade esto:
+repository:
+  url: https://github.com/marco-canas/analisis_numerico  # URL de tu repo
+
+execute:
+  execute_notebooks: auto
+
+html:
+  use_issues_button: true    # Requiere 'repository.url'
+  use_repository_button: true  # Requiere 'repository.url'
+
+execute:
+  execute_notebooks: "off"  # Desactiva la ejecución
