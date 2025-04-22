@@ -1,12 +1,7 @@
-# Python and R for the modern data Scientist
-
-Tha best of Both J. Worlds
+# Evaluación en Cálculo Vectorial
 
 
-Reading to Rick Scavetta
-Boyan Angelov
-
-# Descripción de la tarea 
+# Descripción de las tareas 
 
 ## Tarea 1 
 Cómo instala R para análisis de datos en Ingeniría Agropecuaria.   
@@ -23,9 +18,6 @@ Cómo cambiar la excentricidad de la elipse al cambiar la distancia entre focos 
 
 Tiene que ver con el encilage. 
 
-# Parcial 1 Fecha límite. 1 de abril. Video con el patrón de riego hiperbólico. 
-
-
 # Gestión de la notas del curso
 
 ## Tareas
@@ -35,3 +27,15 @@ Tiene que ver con el encilage.
 * Tarea 2  Cómo cambiar la excentricidad de la elipse al cambiar la distancia entre focos con GeoGebra. A través de un video. (Se califica sobre 4.0).
 
 * 
+
+# Gestión de los parciales  
+
+## Parcial 1 
+
+* Fecha Límite de entrega: 28 de abril de 2025.
+* Temas a evaluar: Seciones Cónicas y Vectores en el Plano.
+* Debe entregar el video de presentación de solución del parcial asignado en cuaderno Jupyter en lenguaje Python o R.
+* [El vínculo donde encontrará el parcial individual asignado es:](https://github.com/marco-canas/calculo_vectorial/blob/main/4_clases/4_vectores/1_vectores_plano/2_eval_vectores_plano.ipynb) 
+
+
+
