@@ -1,7 +1,0 @@
-format: jb-book
-root: index.md  # Página de inicio (puede ser un notebook)
-
-chapters:
-  - file: notebooks/01-introduccion.ipynb
-  - file: notebooks/02-metodos_numericos.ipynb
-  # Añade más archivos aquí

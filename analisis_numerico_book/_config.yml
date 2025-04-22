@@ -1,0 +1,10 @@
+title: "Análisis Numérico"
+author: "Marco Cañas"
+logo: images/logo_analisis_numerico.png
+
+repository:
+  url: https://github.com/marco-canas/analisis_numerico
+  branch: main
+
+execute:
+  execute_notebooks: "off"  # Desactiva ejecución inicialmente
