@@ -1,3 +1,0 @@
-### Enfoque
-
-- Investigación-acción educativa con método mixto...

@@ -1,3 +1,0 @@
-### Objetivo General
-
-- Evaluar el impacto de la implementación combinada...

@@ -1,3 +1,0 @@
-### Necesidad Identificada
-
-- **Gap actual**: ...

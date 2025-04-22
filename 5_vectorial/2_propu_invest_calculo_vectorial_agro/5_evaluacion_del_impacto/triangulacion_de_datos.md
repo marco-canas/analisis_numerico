@@ -1,3 +1,0 @@
-### Triangulación de Datos
-
-- Comparar resultados de tests, encuestas...

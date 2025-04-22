@@ -1,3 +1,0 @@
-### Objetivos Específicos
-
-1. Medir la mejora en competencias técnicas...

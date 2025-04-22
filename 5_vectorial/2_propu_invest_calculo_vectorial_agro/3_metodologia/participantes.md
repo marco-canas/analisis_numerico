@@ -1,3 +1,0 @@
-### Participantes
-
-- Estudiantes de Ingeniería Agropecuaria del Campus Caucasia...

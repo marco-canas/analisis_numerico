@@ -1,3 +1,0 @@
-### Conclusión
-
-Este enfoque busca transformar la enseñanza del cálculo vectorial...

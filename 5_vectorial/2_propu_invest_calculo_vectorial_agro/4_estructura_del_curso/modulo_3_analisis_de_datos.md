@@ -1,3 +1,0 @@
-### Módulo 3: Análisis de Datos y Toma de Decisiones
-
-- **Actividad**: Usar Jupyter para analizar datos...

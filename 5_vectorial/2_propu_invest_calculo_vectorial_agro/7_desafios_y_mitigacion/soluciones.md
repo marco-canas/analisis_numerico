@@ -1,3 +1,0 @@
-### Soluciones
-
-- Talleres introductorios sobre uso de GitHub/Colab...

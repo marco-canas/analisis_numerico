@@ -1,3 +1,0 @@
-### Indicadores Clave
-
-- **Técnicos**: % de estudiantes que resuelven problemas complejos...

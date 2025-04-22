@@ -1,3 +1,0 @@
-### Para la Investigación
-
-- Evidencia empírica de que los enfoques combinados...

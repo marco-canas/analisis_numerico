@@ -1,3 +1,0 @@
-### Instrumentos
-
-- Pre-test y post-test...

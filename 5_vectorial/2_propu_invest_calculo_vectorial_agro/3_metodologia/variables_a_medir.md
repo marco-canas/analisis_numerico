@@ -1,3 +1,0 @@
-### Variables a Medir
-
-- **Independientes**: Implementación de Aula Invertida...
