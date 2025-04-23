@@ -1,1 +1,1 @@
-Dame, por favor, la secuencia para constituir al repositorio: https://github.com/marco-canas/analisis_numerico
+Dame, por favor, la secuencia para constituir al repositorio: https://github.com/marco-canas/analisis_numerico en la carpeta "analisis_numerico_book" la cual tiene las siguientes subcarpetas: docs, images, y notebooks. En images tengo el logo para el jupyter book cuyo nombre de archivo es "logo_analisis_numerico.png"

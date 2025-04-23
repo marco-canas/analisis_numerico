@@ -1,10 +1,13 @@
-title: "Análisis Numérico"
+# docs/_config.yml
+title: "Análisis Numérico con Python"
 author: "Marco Cañas"
-logo: images/logo_analisis_numerico.png
-
-repository:
-  url: https://github.com/marco-canas/analisis_numerico
-  branch: main
+logo: "../images/logo_analisis_numerico.png"
 
 execute:
-  execute_notebooks: "off"  # Desactiva ejecución inicialmente
+  execute_notebooks: auto  # Opciones: 'auto', 'force', 'cache', 'off'
+
+# Opciones de visualización
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
