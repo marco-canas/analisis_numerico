@@ -1,0 +1,1 @@
+Dame, por favor, la secuencia para constituir al repositorio: https://github.com/marco-canas/analisis_numerico
