@@ -1,0 +1,12 @@
+# Configuración mínima requerida ahora:
+title: "Análisis Numérico con Python"
+author: "Marco Cañas"
+logo: "../images/logo_analisis_numerico.png"
+
+repository:
+  url: https://github.com/marco-canas/analisis_numerico  # ← Añade esto
+  branch: main  # Rama principal
+
+# Opcional: si no quieres los botones de repositorio
+html:
+  use_repository_button: false  # Desactiva los botones

@@ -1,0 +1,1646 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Video de apoyo a la lectura interactiva y experimental de este cuaderno &#8212; Análisis Numérico con Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/1_left_sum';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="docs/intro.md" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_analisis_numerico.png" class="logo__image only-light" alt="Análisis Numérico con Python - Home"/>
+    <script>document.write(`<img src="../_static/logo_analisis_numerico.png" class="logo__image only-dark" alt="Análisis Numérico con Python - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    docs/intro.md
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><span class="xref myst">Video de apoyo a la lectura interactiva y experimental de este cuaderno</span></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/1_left_sum.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Video de apoyo a la lectura interactiva y experimental de este cuaderno</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><span class="xref myst">Video de apoyo a la lectura interactiva y experimental de este cuaderno</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vinculo-al-programa-del-curso"><span class="xref myst">Vínculo al programa del curso:  </span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-mi-labor-docente">Principios de mi labor docente</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-general-de-clase-aula-invertida">Modelo general de clase: aula invertida</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-aprendizaje-basado-en-problemas-y-proyectos-abpp">Metodología de Aprendizaje Basado en Problemas y Proyectos (ABPP)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-del-pensamiento-computacional-con-lenguajes-python-r-y-con-archivos-markdown-y-r-markdown-orientado-a-la-formacion-en-ciencia-de-datos">Desarrollo del pensamiento computacional con Lenguajes Python, R; y con archivos Markdown y R-Markdown orientado a la formación en ciencia de datos</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-de-fomento-a-la-ciencia-abierta-ensenar-en-el-acceso-a-los-datos-publicos-y-el-uso-de-software-de-codigo-abierto">Principio de fomento a la ciencia abierta, enseñar en el acceso a los datos públicos y el uso de software de código abierto</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#que-estamos-haciendo-por-la-internalizacion-en-esta-clase-y-este-curso">Qué estamos haciendo por la internalización en esta clase y este curso</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-global-en-la-formacion-academica">1. <strong>Visión Global en la Formación Académica</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#innovacion-pedagogica-con-enfoque-internacional">2. <strong>Innovación Pedagógica con Enfoque Internacional</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnologia-y-herramientas-de-uso-global">3. <strong>Tecnología y Herramientas de Uso Global</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investigacion-y-publicaciones-internacionales">4. <strong>Investigación y Publicaciones Internacionales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uso-del-ingles-para-la-internacionalizacion">5. <strong>Uso del Inglés para la Internacionalización</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#certificaciones-y-estandares-internacionales">6. <strong>Certificaciones y Estándares Internacionales</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proyectos-abiertos-y-ciencia-reproducible">7. <strong>Proyectos Abiertos y Ciencia Reproducible</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participacion-en-redes-y-conferencias-internacionales">8. <strong>Participación en Redes y Conferencias Internacionales</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-ensenanza-aprendizaje-basado-en-problemas-y-proyectos-abpp"><strong>Metodología de Enseñanza: Aprendizaje Basado en Problemas y Proyectos (ABPP)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamentos-del-abpp"><strong>1. Fundamentos del ABPP</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-del-abpp-en-areas-especificas"><strong>2. Aplicación del ABPP en Áreas Específicas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educacion-infantil-licenciatura-en-educacion-infantil"><strong>Educación Infantil (Licenciatura en Educación Infantil)</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#licenciatura-en-matematicas"><strong>Licenciatura en Matemáticas</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ingenieria-agropecuaria"><strong>Ingeniería Agropecuaria</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#administracion-de-empresas"><strong>Administración de Empresas</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beneficios-del-abpp"><strong>3. Beneficios del ABPP</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-general-de-implementacion"><strong>4. Ejemplo General de Implementación</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fomento-de-la-lectura-literaria-asociada-a-ingenieria-agropecuaria-y-licenciatura-en-matematicas">Fomento de la lectura literaria asociada a Ingeniería agropecuaria y licenciatura en Matemáticas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titulo-de-la-clase-sumas-de-riemann-izquierda">Título de la clase: Sumas de Riemann Izquierda</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-general-para-todas-las-clases">Estructura general para todas las clases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-inicial-para-visualizacion-estatica">Configuración inicial para visualización estática</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-de-la-clase">Estructura de la clase</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-clase-sumas-izquierdas-de-riemann-con-enfoque-steams-aula-invertida-y-abpp">Diseño de Clase: Sumas Izquierdas de Riemann con Enfoque STEAMS, Aula Invertida y ABPP</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titulo-de-la-clase">1. Título de la Clase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje-e-indicadores">2. Objetivos de Aprendizaje e Indicadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-conceptual-graphviz">3. Mapa Conceptual (Graphviz)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historia-y-epistemologia-cuento-antioqueno">4. Historia y Epistemología (Cuento Antioqueño)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-clase-situacion-real">5. Contenido de la Clase (Situación Real)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-python-para-determinar-numero-de-rectangulos">6. Función Python para Determinar Número de Rectángulos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-de-aprendizaje">7. Actividades de Aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cancion-poema-para-interiorizar-conceptos">8. Canción/Poema para Interiorizar Conceptos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tareas-y-actividades-de-fijacion">9. Tareas y Actividades de Fijación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion">10. Evaluación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retroalimentacion">11. Retroalimentación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulario-en-ingles">12. Vocabulario en Inglés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apendice-habilidades-blandas">13. Apéndice: Habilidades Blandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referentes-en-didactica-apa">14. Referentes en Didáctica (APA)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-del-calendario-academico-para-los-diferentes-programas-de-pregrado-de-los-campus-regionalizados-correspondiente-al-primer-periodo-academico-del-ano-2025-asi">Definición del calendario académico para los diferentes programas de pregrado de los campus regionalizados, correspondiente al primer periodo académico del año 2025, así:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cursos-que-orienta-el-profesor-marco-julio-canas-campillo-en-2025">Cursos que orienta el profesor Marco Julio Cañas Campillo en 2025</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#horario-de-clases-del-profesor-marco">Horario de clases del profesor Marco</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#horarios-de-monitoria-y-asesoria">Horarios de monitoría y asesoría</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-manuel-san-juan-serrano">Monitor Manuel San Juan Serrano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referentes">Referentes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#como-estudiante-encuentro-que">Como estudiante, encuentro que…</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluamos-al-profesor-marco-canas-aqui">Evaluamos al profesor Marco Cañas Aquí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-su-aprendizaje-en-la-siguiente-clase-a-traves-del-siguiente-vinculo">Continue su aprendizaje en la siguiente clase a través del siguiente <span class="xref myst">vínculo</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimientos">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#apendice-sobre-calendarios-y-coordinaciones">Apéndice sobre calendarios y coordinaciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clase-de-analisis-numerico-los-martes-de-8-a-12-del-medio-dia">Clase de análisis numérico los Martes de 8 a 12 del medio día.</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <table align="left">
+  <td>
+    <a href="https://colab.research.google.com/github/ageron/handson-ml3/blob/main/tools_numpy.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+  </td>
+  <td>
+    <a target="_blank" href="https://kaggle.com/kernels/welcome?src=https://github.com/ageron/handson-ml3/blob/main/tools_numpy.ipynb"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a>
+  </td>
+</table><section id="video-de-apoyo-a-la-lectura-interactiva-y-experimental-de-este-cuaderno">
+<h1><a class="reference internal" href="#"><span class="xref myst">Video de apoyo a la lectura interactiva y experimental de este cuaderno</span></a><a class="headerlink" href="#video-de-apoyo-a-la-lectura-interactiva-y-experimental-de-este-cuaderno" title="Link to this heading">#</a></h1>
+</section>
+<section id="vinculo-al-programa-del-curso">
+<h1><a class="reference internal" href="#"><span class="xref myst">Vínculo al programa del curso:  </span></a><a class="headerlink" href="#vinculo-al-programa-del-curso" title="Link to this heading">#</a></h1>
+<p>Un reconocimiento a mis estudiantes que han construido conmigo este saber pedagógico:</p>
+<img src = ''> 
+<p>Reconocimiento a las profesoras destacadas en enseñanza de la matemática en Colombia</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Cargar la lista de estudiantes desde el archivo CSV</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;C:/Users/marco/Documentos/docencia/groups_list/geometria.csv&#39;</span>
+<span class="n">estudiantes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">estudiantes</span><span class="p">[</span><span class="s1">&#39;Parcial&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">estudiantes</span><span class="p">[</span><span class="s1">&#39;Parcial&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>  <span class="c1"># Asegurar que la columna &#39;Parcial&#39; es float</span>
+
+<span class="c1"># Convertir la columna &#39;Nombre&#39; a una lista de Python</span>
+<span class="n">lista_estudiantes</span> <span class="o">=</span> <span class="n">estudiantes</span><span class="p">[</span><span class="s1">&#39;Nombre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># Función para llamar a un estudiante aleatoriamente y registrar su nota de seguimiento</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">asistencia</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">lista_estudiantes</span>
+    <span class="k">if</span> <span class="n">lista_estudiantes</span><span class="p">:</span>
+        <span class="n">estudiante_aleatorio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">lista_estudiantes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Llamando a </span><span class="si">{</span><span class="n">estudiante_aleatorio</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+        <span class="n">asistencia</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;¿Asistió </span><span class="si">{</span><span class="n">estudiante_aleatorio</span><span class="si">}</span><span class="s2">? (s/n): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        
+        <span class="c1"># Validación de entrada</span>
+        <span class="k">if</span> <span class="n">asistencia</span> <span class="o">==</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span>
+            <span class="c1"># Obtener el índice del estudiante en el DataFrame</span>
+            <span class="n">indice</span> <span class="o">=</span> <span class="n">estudiantes</span><span class="p">[</span><span class="n">estudiantes</span><span class="p">[</span><span class="s1">&#39;Nombre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">estudiante_aleatorio</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="c1"># Incrementar su valor en la columna &#39;Parcial&#39;</span>
+            <span class="n">estudiantes</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">indice</span><span class="p">,</span> <span class="s1">&#39;Parcial&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">0.3</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Actualizado: </span><span class="si">{</span><span class="n">estudiante_aleatorio</span><span class="si">}</span><span class="s2"> ahora tiene </span><span class="si">{</span><span class="n">estudiantes</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">indice</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Parcial&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> en la columna &#39;Parcial&#39;.&quot;</span><span class="p">)</span>
+        
+        <span class="k">elif</span> <span class="n">asistencia</span> <span class="o">!=</span> <span class="s1">&#39;n&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Entrada inválida. Por favor, introduce &#39;s&#39; para sí o &#39;n&#39; para no.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>  <span class="c1"># Volver a preguntar para el mismo estudiante si la entrada es inválida</span>
+        
+        <span class="c1"># Remover al estudiante de la lista para no llamarlo de nuevo</span>
+        <span class="n">lista_estudiantes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">estudiante_aleatorio</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Se han llamado a todos los estudiantes del grupo completo.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Función para guardar cambios al final de la sesión</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">guardar_cambios</span><span class="p">():</span>
+    <span class="n">estudiantes</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cambios guardados en el archivo CSV.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ejemplo de uso</span>
+<span class="k">while</span> <span class="n">lista_estudiantes</span><span class="p">:</span>
+    <span class="n">asistencia</span><span class="p">()</span>
+
+<span class="c1"># Guardar los cambios una vez que todos los estudiantes hayan sido llamados</span>
+<span class="n">guardar_cambios</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Cargar la lista de estudiantes desde el archivo CSV</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="principios-de-mi-labor-docente">
+<h1>Principios de mi labor docente<a class="headerlink" href="#principios-de-mi-labor-docente" title="Link to this heading">#</a></h1>
+<section id="modelo-general-de-clase-aula-invertida">
+<h2>Modelo general de clase: <a class="reference external" href="https://www3.gobiernodecanarias.org/medusa/ecoescuela/pedagotic/aprendizaje-invertido-flipped-classroom/">aula invertida</a><a class="headerlink" href="#modelo-general-de-clase-aula-invertida" title="Link to this heading">#</a></h2>
+<img src = 'https://resources.maneuveringthemiddle.com/wp-content/uploads/2020/07/04212706/1-5.png' width = 200>  
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="metodologia-de-aprendizaje-basado-en-problemas-y-proyectos-abpp">
+<h1>Metodología de Aprendizaje Basado en Problemas y Proyectos (ABPP)<a class="headerlink" href="#metodologia-de-aprendizaje-basado-en-problemas-y-proyectos-abpp" title="Link to this heading">#</a></h1>
+<img src = 'https://www.unir.net/wp-content/uploads/2020/07/aprendizaje-problemas2-1-1-1-1.jpeg' width = 200></section>
+<section class="tex2jax_ignore mathjax_ignore" id="desarrollo-del-pensamiento-computacional-con-lenguajes-python-r-y-con-archivos-markdown-y-r-markdown-orientado-a-la-formacion-en-ciencia-de-datos">
+<h1>Desarrollo del pensamiento computacional con Lenguajes Python, R; y con archivos Markdown y R-Markdown orientado a la formación en ciencia de datos<a class="headerlink" href="#desarrollo-del-pensamiento-computacional-con-lenguajes-python-r-y-con-archivos-markdown-y-r-markdown-orientado-a-la-formacion-en-ciencia-de-datos" title="Link to this heading">#</a></h1>
+<img src = 'https://i.ytimg.com/vi/mcG_wcR4e6M/maxresdefault.jpg' width = 200></section>
+<section class="tex2jax_ignore mathjax_ignore" id="principio-de-fomento-a-la-ciencia-abierta-ensenar-en-el-acceso-a-los-datos-publicos-y-el-uso-de-software-de-codigo-abierto">
+<h1>Principio de fomento a la ciencia abierta, enseñar en el acceso a los datos públicos y el uso de software de código abierto<a class="headerlink" href="#principio-de-fomento-a-la-ciencia-abierta-ensenar-en-el-acceso-a-los-datos-publicos-y-el-uso-de-software-de-codigo-abierto" title="Link to this heading">#</a></h1>
+<img src = 'https://unesdoc.unesco.org/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0000379949_spa&author=UNESCO&title=Recomendaci%C3%B3n+de+la+UNESCO+sobre+la+Ciencia+Abierta&year=2021&publisher=UNESCO&TypeOfDocument=UnescoPhysicalDocument&mat=PGD&ct=true&size=512&isPhysical=1' width = 200><p>El enfoque STEAMS en educación preescolar, primaria y secundaria es una extensión del enfoque STEM (Ciencia, Tecnología, Ingeniería y Matemáticas) y su variante STEAM, que incorpora el Arte.</p>
+<p>El acrónimo STEAMS incluye:</p>
+<ol class="arabic simple">
+<li><p><strong>Science (Ciencia):</strong> Fomenta la curiosidad por el mundo natural y el desarrollo de habilidades científicas, como la observación, experimentación y análisis.</p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p><strong>Technology (Tecnología):</strong> Integra herramientas tecnológicas para potenciar el aprendizaje y la resolución de problemas, promoviendo la alfabetización digital desde edades tempranas.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p><strong>Engineering (Ingeniería):</strong> Introduce el pensamiento lógico y la resolución de problemas estructurados, fomentando habilidades como el diseño y la construcción de soluciones.</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p><strong>Arts (Arte):</strong> Añade creatividad y pensamiento crítico, permitiendo a los estudiantes expresarse y explorar el aprendizaje a través de formas artísticas (plásticas, música, teatro).</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p><strong>Mathematics (Matemáticas):</strong> Refuerza las habilidades numéricas y el razonamiento lógico, fundamentales en la resolución de problemas y comprensión de conceptos abstractos.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p><strong>Social Sciences (Ciencias Sociales):</strong> Incorpora la comprensión del entorno social, político, cultural y económico, promoviendo el desarrollo de la conciencia crítica sobre el mundo y su historia, además de habilidades de empatía y ciudadanía.</p></li>
+</ol>
+<p>El enfoque STEAMS pretende desarrollar un aprendizaje <strong>interdisciplinario</strong> que integre estas áreas para fomentar un pensamiento más holístico y práctico.</p>
+<p>Se busca que los estudiantes no solo aprendan conocimientos técnicos, sino también cómo aplicarlos creativa y críticamente en situaciones reales, promoviendo habilidades como el trabajo en equipo, la comunicación y la innovación.</p>
+<p>En educación preescolar, primaria, secundaria y superior, se adapta a las diferentes etapas de desarrollo cognitivo y emocional de los estudiantes, promoviendo el aprendizaje activo y contextualizado.</p>
+<img src = 'https://www.campuseducacion.com/blog/wp-content/uploads/2023/03/foto01-1.jpg' width = 200></section>
+<section class="tex2jax_ignore mathjax_ignore" id="que-estamos-haciendo-por-la-internalizacion-en-esta-clase-y-este-curso">
+<h1>Qué estamos haciendo por la internalización en esta clase y este curso<a class="headerlink" href="#que-estamos-haciendo-por-la-internalizacion-en-esta-clase-y-este-curso" title="Link to this heading">#</a></h1>
+<p>Estas son mis acciones como docente de matemáticas en la Universidad de Antioquia con miras a la <strong>internacionalización</strong> de mi práctica docente y el desarrollo de competencias internacionales para mis estudiantes, ls cuales he estructurado con el siguiente enfoque:</p>
+<section id="vision-global-en-la-formacion-academica">
+<h2>1. <strong>Visión Global en la Formación Académica</strong><a class="headerlink" href="#vision-global-en-la-formacion-academica" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Competencias Internacionales</strong>: Asegúrate de que el contenido de tus cursos fomente habilidades que sean reconocidas globalmente.</p></li>
+</ul>
+<p>Al educar a los estudiantes en <strong>Python, LaTeX, Markdown y Jupyter Notebooks</strong> y en la <strong>introducción a la ciencia de datos y técnicas de Machine Learning</strong>, estás proporcionando competencias altamente demandadas en los sectores tecnológicos y académicos a nivel internacional.</p>
+<ul class="simple">
+<li><p><strong>Relevancia de los Contenidos</strong>: Destaca cómo los temas que enseñas, como el <strong>desarrollo del pensamiento computacional</strong> y la <strong>ciencia de datos</strong>, están alineados con las necesidades globales actuales en diversas industrias, desde la tecnología hasta las ciencias naturales y sociales.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Referencias a Estándares Internacionales</strong>: Puedes vincular tu enseñanza a estándares internacionales de competencias en programación y ciencia de datos (por ejemplo, frameworks del <strong>IEEE, ACM</strong>, y estándares de la <strong>data science</strong> o la <strong>computación en la nube</strong>).</p></li>
+</ul>
+</section>
+<section id="innovacion-pedagogica-con-enfoque-internacional">
+<h2>2. <strong>Innovación Pedagógica con Enfoque Internacional</strong><a class="headerlink" href="#innovacion-pedagogica-con-enfoque-internacional" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Aula Invertida y ABP</strong>: Presenta cómo tu enfoque de <strong>aula invertida</strong> y <strong>aprendizaje basado en problemas (ABP)</strong> permite a los estudiantes trabajar de manera autónoma y colaborativa, lo que los prepara para escenarios laborales internacionales que requieren autoaprendizaje y habilidades de resolución de problemas en equipo.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Uso de Jupyter Notebooks</strong>: El uso de <strong>Jupyter Notebooks</strong> en tus clases no solo facilita la <strong>integración de código, matemáticas y texto</strong>, sino que también es una plataforma utilizada globalmente en ambientes académicos y profesionales, lo que hace a tus estudiantes más competitivos internacionalmente.</p></li>
+</ul>
+</section>
+<section id="tecnologia-y-herramientas-de-uso-global">
+<h2>3. <strong>Tecnología y Herramientas de Uso Global</strong><a class="headerlink" href="#tecnologia-y-herramientas-de-uso-global" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Lenguaje Python</strong>: Python es uno de los lenguajes de programación más usados a nivel mundial, tanto en la academia como en la industria.</p></li>
+</ul>
+<p>Al formar a tus estudiantes en Python para ciencia de datos y machine learning, los preparas para operar en entornos tecnológicos globales.</p>
+<ul class="simple">
+<li><p><strong>Herramientas de Ciencia Abierta</strong>: Resalta cómo herramientas como <strong>GitHub</strong>, <strong>Google Colab</strong> y otras plataformas de código abierto están alineadas con el movimiento de <strong>ciencia abierta</strong>, el cual es internacionalmente reconocido y permite que los estudiantes colaboren y compartan proyectos a nivel global.</p></li>
+</ul>
+</section>
+<section id="investigacion-y-publicaciones-internacionales">
+<h2>4. <strong>Investigación y Publicaciones Internacionales</strong><a class="headerlink" href="#investigacion-y-publicaciones-internacionales" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Promoción de la Investigación</strong>: Detalla cómo promueves que tus estudiantes participen en proyectos de <strong>investigación aplicada</strong>, con posibilidad de publicación en revistas internacionales. Esto contribuye a la reputación internacional de la Universidad de Antioquia.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Colaboraciones Internacionales</strong>: Si has colaborado con investigadores de otras instituciones o universidades en el extranjero, menciona estos proyectos y cómo han enriquecido tu enseñanza y proporcionado a los estudiantes una visión más globalizada.</p></li>
+</ul>
+</section>
+<section id="uso-del-ingles-para-la-internacionalizacion">
+<h2>5. <strong>Uso del Inglés para la Internacionalización</strong><a class="headerlink" href="#uso-del-ingles-para-la-internacionalizacion" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Comunicación Científica en Inglés</strong>:</p></li>
+</ul>
+<p>Fomentar el aprendizaje del inglés como lengua científica es clave para que tus estudiantes puedan acceder a publicaciones internacionales, conferencias, y material académico que no está disponible en español.</p>
+<p>Esto es esencial para que adquieran competencias que les permitan desempeñarse en cualquier contexto internacional.</p>
+<ul class="simple">
+<li><p><strong>Material Bilingüe</strong>: Al generar material educativo en Python, LaTeX y Markdown, considera ofrecer algunos de estos recursos en inglés, para que los estudiantes se familiaricen con el vocabulario técnico y científico internacional.</p></li>
+</ul>
+<section id="certificaciones-y-estandares-internacionales">
+<h3>6. <strong>Certificaciones y Estándares Internacionales</strong><a class="headerlink" href="#certificaciones-y-estandares-internacionales" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Participación en Certificaciones Internacionales</strong>: Impulsa que los estudiantes busquen certificaciones internacionales en Python o ciencia de datos (como las ofrecidas por <strong>Coursera, edX,</strong> o <strong>Google</strong>).</p></li>
+</ul>
+<p>Estas certificaciones no solo validan sus competencias, sino que también incrementan el reconocimiento de la Universidad de Antioquia en el contexto internacional.</p>
+<ul class="simple">
+<li><p><strong>Alineación con Acreditaciones Internacionales</strong>: Vincula tu trabajo docente con los estándares de acreditación y certificación que garantizan que la universidad siga siendo reconocida internacionalmente.</p></li>
+</ul>
+<p>Puedes vincularte con organizaciones internacionales que promuevan la excelencia en la educación y tecnología, como <strong>ABET</strong> para la acreditación en ingeniería y ciencias computacionales.</p>
+</section>
+<section id="proyectos-abiertos-y-ciencia-reproducible">
+<h3>7. <strong>Proyectos Abiertos y Ciencia Reproducible</strong><a class="headerlink" href="#proyectos-abiertos-y-ciencia-reproducible" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>GitHub y Open Science</strong>: La utilización de <strong>GitHub</strong> para almacenar los proyectos y materiales de enseñanza en repositorios públicos permite que otros investigadores y educadores internacionales puedan revisar y replicar tu trabajo. Esto contribuye a la creación de una red de colaboración científica abierta.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Transparencia y Reproducibilidad</strong>: La ciencia de datos y machine learning están profundamente ligados a la reproducibilidad. Asegura que tus estudiantes desarrollen prácticas de transparencia y documentación en la investigación, que son pilares en la comunidad científica global.</p></li>
+</ul>
+</section>
+<section id="participacion-en-redes-y-conferencias-internacionales">
+<h3>8. <strong>Participación en Redes y Conferencias Internacionales</strong><a class="headerlink" href="#participacion-en-redes-y-conferencias-internacionales" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Presentación en Conferencias Internacionales</strong>: Destaca cómo tu participación en conferencias internacionales (como la <strong>ASCOLFA</strong> o eventos sobre educación en matemáticas) contribuye al prestigio de la universidad y permite que tus prácticas sean evaluadas y reconocidas a nivel global.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Promoción de Estudiantes en Eventos Internacionales</strong>: Impulsa la participación de tus estudiantes en competiciones internacionales de programación o hackathons, como los organizados por <strong>Google</strong>, <strong>ACM</strong> o <strong>Kaggle</strong>.</p></li>
+</ul>
+<p>Esto no solo desarrolla sus habilidades, sino que también visibiliza el talento de la Universidad de Antioquia a nivel global.</p>
+<p>Con esta estrategia, presento mis acciones docentes en términos de competencias internacionales, innovación pedagógica, tecnología, investigación y participación en redes globales, asegurando que mi práctica esté alineada con los estándares internacionales y que tus estudiantes estén preparados para competir en contextos internacionales.</p>
+</section>
+<section id="metodologia-de-ensenanza-aprendizaje-basado-en-problemas-y-proyectos-abpp">
+<h3><strong>Metodología de Enseñanza: Aprendizaje Basado en Problemas y Proyectos (ABPP)</strong><a class="headerlink" href="#metodologia-de-ensenanza-aprendizaje-basado-en-problemas-y-proyectos-abpp" title="Link to this heading">#</a></h3>
+<p>El <strong>Aprendizaje Basado en Problemas y Proyectos (ABPP)</strong> es una metodología educativa que integra los enfoques del <strong>Aprendizaje Basado en Problemas (ABP)</strong> y el <strong>Aprendizaje Basado en Proyectos (PBL, por sus siglas en inglés)</strong>.</p>
+<p>Es especialmente útil para la formación de futuros docentes, ingenieros y administradores, ya que combina el desarrollo de habilidades prácticas con el pensamiento crítico y reflexivo.</p>
+<p>A continuación, se presenta una descripción adaptada a la enseñanza de las matemáticas en educación infantil, Licenciatura en Matemáticas, Ingeniería Agropecuaria y Administración de Empresas:</p>
+</section>
+<hr class="docutils" />
+<section id="fundamentos-del-abpp">
+<h3><strong>1. Fundamentos del ABPP</strong><a class="headerlink" href="#fundamentos-del-abpp" title="Link to this heading">#</a></h3>
+<p>El ABPP se basa en:</p>
+<ul class="simple">
+<li><p><strong>Resolución de Problemas Reales:</strong> Los estudiantes analizan y resuelven problemas auténticos relacionados con su área de formación, fomentando la aplicación práctica del conocimiento.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Proyectos como Herramientas Integradoras:</strong> Los proyectos permiten desarrollar habilidades interdisciplinarias y ofrecer soluciones concretas a los problemas planteados.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Aprendizaje Activo:</strong> Los estudiantes son responsables de su aprendizaje y participan activamente en el proceso de investigación, diseño y solución.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="aplicacion-del-abpp-en-areas-especificas">
+<h3><strong>2. Aplicación del ABPP en Áreas Específicas</strong><a class="headerlink" href="#aplicacion-del-abpp-en-areas-especificas" title="Link to this heading">#</a></h3>
+<section id="educacion-infantil-licenciatura-en-educacion-infantil">
+<h4><strong>Educación Infantil (Licenciatura en Educación Infantil)</strong><a class="headerlink" href="#educacion-infantil-licenciatura-en-educacion-infantil" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Enfoque:</strong> Desarrollo del pensamiento matemático en la infancia desde contextos lúdicos, familiares y culturales.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Problemas típicos:</strong></p>
+<ul>
+<li><p>¿Cómo enseñar los números naturales mediante actividades prácticas y juegos?</p></li>
+<li><p>¿Qué estrategias pueden emplearse para abordar el concepto de cantidad en edades tempranas?</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Proyectos:</strong> Diseño de secuencias didácticas que usen Python, Jupyter Notebooks y materiales manipulativos para enseñar matemáticas de forma interactiva.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Competencias desarrolladas:</strong></p>
+<ul>
+<li><p>Uso de herramientas tecnológicas para diseñar actividades educativas.</p></li>
+<li><p>Comprensión del desarrollo cognitivo infantil y su relación con las matemáticas.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="licenciatura-en-matematicas">
+<h4><strong>Licenciatura en Matemáticas</strong><a class="headerlink" href="#licenciatura-en-matematicas" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Enfoque:</strong> Resolución de problemas matemáticos aplicados y profundización teórica en áreas como análisis matemático y modelado.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>Problemas típicos:</strong></p>
+<ul>
+<li><p>¿Cómo se pueden resolver ecuaciones diferenciales aplicadas a modelos físicos o económicos?</p></li>
+<li><p>¿Cómo modelar fenómenos naturales mediante funciones matemáticas?</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Proyectos:</strong></p>
+<ul>
+<li><p>Desarrollo de software educativo para explorar conceptos matemáticos.</p></li>
+<li><p>Aplicación de modelado matemático para resolver problemas reales en otras disciplinas.</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Competencias desarrolladas:</strong></p>
+<ul>
+<li><p>Dominio de la matemática teórica y aplicada.</p></li>
+<li><p>Uso de tecnología para la enseñanza y la investigación.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ingenieria-agropecuaria">
+<h4><strong>Ingeniería Agropecuaria</strong><a class="headerlink" href="#ingenieria-agropecuaria" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Enfoque:</strong> Modelado matemático y análisis de datos para mejorar la producción agrícola y la gestión de recursos.</p></li>
+<li><p><strong>Problemas típicos:</strong></p>
+<ul>
+<li><p>¿Cómo modelar el crecimiento de cultivos considerando variables climáticas?</p></li>
+<li><p>¿Cómo optimizar el uso del agua en sistemas de riego mediante análisis matemático?</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Proyectos:</strong></p>
+<ul>
+<li><p>Desarrollo de modelos predictivos con Python y bibliotecas de aprendizaje automático.</p></li>
+<li><p>Implementación de proyectos que combinen matemáticas y ciencias de datos para resolver problemas agrícolas.</p></li>
+</ul>
+</li>
+<li><p><strong>Competencias desarrolladas:</strong></p>
+<ul>
+<li><p>Integración de matemáticas con tecnologías avanzadas.</p></li>
+<li><p>Resolución de problemas agropecuarios mediante análisis y modelado.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="administracion-de-empresas">
+<h4><strong>Administración de Empresas</strong><a class="headerlink" href="#administracion-de-empresas" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Enfoque:</strong> Uso de las matemáticas y la ciencia de datos para la toma de decisiones estratégicas.</p></li>
+<li><p><strong>Problemas típicos:</strong></p>
+<ul>
+<li><p>¿Cómo identificar patrones de comportamiento del consumidor usando series de tiempo?</p></li>
+<li><p>¿Qué estrategias matemáticas pueden optimizar la asignación de recursos en una empresa?</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Proyectos:</strong></p>
+<ul>
+<li><p>Implementación de modelos de análisis financiero y simulaciones.</p></li>
+<li><p>Desarrollo de dashboards interactivos para la gestión de datos empresariales.</p></li>
+</ul>
+</li>
+<li><p><strong>Competencias desarrolladas:</strong></p>
+<ul>
+<li><p>Habilidad para interpretar datos matemáticos en contextos de negocio.</p></li>
+<li><p>Capacidad para diseñar soluciones basadas en datos.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="beneficios-del-abpp">
+<h3><strong>3. Beneficios del ABPP</strong><a class="headerlink" href="#beneficios-del-abpp" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Desarrollo de competencias clave:</strong></p>
+<ul>
+<li><p>Pensamiento crítico y creativo.</p></li>
+<li><p>Trabajo colaborativo.</p></li>
+<li><p>Comunicación efectiva.</p></li>
+<li><p>Uso de herramientas tecnológicas avanzadas.</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p><strong>Adaptación al contexto laboral:</strong> Los estudiantes aprenden a enfrentar desafíos del mundo real y a diseñar soluciones prácticas y aplicables.</p></li>
+<li><p><strong>Flexibilidad e interdisciplinariedad:</strong> La metodología se adapta a diversas áreas, fomentando el aprendizaje integrado.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="ejemplo-general-de-implementacion">
+<h3><strong>4. Ejemplo General de Implementación</strong><a class="headerlink" href="#ejemplo-general-de-implementacion" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Identificación del problema:</strong> Se plantea un desafío concreto, como modelar el crecimiento poblacional de una comunidad rural (Ingeniería Agropecuaria) o diseñar una estrategia para enseñar fracciones a niños de 8 años (Educación Infantil).</p></li>
+<li><p><strong>Formación de equipos:</strong> Los estudiantes trabajan en grupos, distribuyendo roles y tareas.</p></li>
+<li><p><strong>Investigación y diseño:</strong> Los estudiantes investigan el problema, proponen soluciones y diseñan un proyecto.</p></li>
+<li><p><strong>Implementación:</strong> Se desarrolla el proyecto, como una herramienta tecnológica o una propuesta pedagógica.</p></li>
+<li><p><strong>Evaluación:</strong> Los estudiantes presentan sus resultados en un informe o una exposición, recibiendo retroalimentación de sus compañeros y docentes.</p></li>
+</ol>
+<p>El ABPP es una metodología versátil que conecta el conocimiento teórico con la práctica, preparando a los estudiantes para los retos de sus profesiones en la enseñanza de la matemática, la ingeniería y la administración.</p>
+</section>
+</section>
+<section id="fomento-de-la-lectura-literaria-asociada-a-ingenieria-agropecuaria-y-licenciatura-en-matematicas">
+<h2>Fomento de la lectura literaria asociada a Ingeniería agropecuaria y licenciatura en Matemáticas<a class="headerlink" href="#fomento-de-la-lectura-literaria-asociada-a-ingenieria-agropecuaria-y-licenciatura-en-matematicas" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="#"><span class="xref myst">Aprender a obtener el sí sin ceder</span></a></p>
+</section>
+<section id="titulo-de-la-clase-sumas-de-riemann-izquierda">
+<h2>Título de la clase: Sumas de Riemann Izquierda<a class="headerlink" href="#titulo-de-la-clase-sumas-de-riemann-izquierda" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="#"><code class="xref myst docutils literal notranslate"></code></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">save_fig</span><span class="p">(</span><span class="n">nombre_archivo_imagen</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span> 
+    <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span> 
+    <span class="n">ubicacion_para_imagenes</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:/Users/marco/Downloads&quot;</span>
+    <span class="n">imagen_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ubicacion_para_imagenes</span><span class="p">,</span> <span class="n">nombre_archivo_imagen</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">imagen_path</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="estructura-general-para-todas-las-clases">
+<h1>Estructura general para todas las clases<a class="headerlink" href="#estructura-general-para-todas-las-clases" title="Link to this heading">#</a></h1>
+<p>Dame, por favor, un diseño de clase, con el enfoque: “Aula Invertida, STEAMS y De aprendizaje basado en problemas y proyectos(ABPP)” sobre: “El método de integración numérica llamado Sumas Izquierdas de Riemann “, siguiendo la estructura:</p>
+<ol class="arabic simple">
+<li><p>Título de la clase</p></li>
+<li><p>Objetivos de aprendizaje que incluyan los indicadores del logro de estos objetivos.</p></li>
+<li><p>Un mapa conceptual que resuma la clase elaborado en Graphviz de Python con nodos y edges de diferentes formas, colores y rellenos y renderizado en la siguiente ubicación: <code class="docutils literal notranslate"><span class="pre">&quot;C:/Users/marco/Downloads&quot;</span></code>. No olvides el parámetro <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">=</span> <span class="pre">True</span></code> para el método <code class="docutils literal notranslate"><span class="pre">render()</span></code> de Graphviz. Para este mapa controla las superposiciones de los nodos con: graph [overlap=false]; // Elimina superposiciones (puede aumentar el espacio)
+graph [overlap=”scalexy”]; // Escala el gráfico para evitar overlaps
+graph [overlap=”compress”]; // Comprime el grafo sin overlaps</p></li>
+<li><p>Dame elementos históricos y epistemológicos asociados a esta clase, pero contados como un cuento al estilo de un cuentero antioqueño en Colombia. Incluye imágenes de los protagonistas históricos de esta clase.</p></li>
+<li><p>Contenido de la clase. Que el contenido parta de una situación real para llegar a una constitución del modelo matemático que represente tal situación real.</p></li>
+<li><p>Deducción de una función de usuario de Python, que permita determinar el número de rectángulos <span class="math notranslate nohighlight">\(n\)</span> necesarios para una precisión de la suma de Riemann dada <span class="math notranslate nohighlight">\(\epsilon = 0.0001\)</span>.</p></li>
+<li><p>Actividades de aprendizaje: que incluya pruebas de escritorio para los algoritmos en forma verbal y seudo código, diagrama de flujo, y la implementación del algoritmo en lenguaje Python.</p></li>
+<li><p>Incluye una canción o un poema que ayude a interiorizar y fijar los conceptos asociados a esta clase.</p></li>
+<li><p>Tarea o actividades de ejercitación y fijación.</p></li>
+<li><p>Evaluación incluyendo diez proyectos, un ejemplo de quiz y un ejemplo de parcial.</p></li>
+<li><p>Diseño de actividad de retroalimentación.</p></li>
+<li><p>Dame un vocabulario y frases del idioma inglés asociadas a esta clase.</p></li>
+<li><p>Incluye apéndice para la clase sobre desarrollo de habilidades para trabajar en equipo y de asertividad y empatía para relacionarnos. También elementos de la inteligencia emocional para presentar pruebas sin temor y sin realizar fraude en ellas. Y Actividades para desarrollar la habilidad de la Tolerancia</p></li>
+<li><p>Incluye 5 referentes en didáctica de la matemática que estén de acuerdo a la propuesta didáctica de esta clase. Adiciona a estos referentes a Raymond Duval (Representaciones y cambios de representación para la adquisición de conceptos matemáticos) y a Jeannette Wing (Desarrollo del pensamiento computacional). Dejame todos estos referentes ordenados de acuerdo a las normas APA. Incluye un referente en didáctica de la matemática que fundamente el uso del Enfoque de Aula Invertida, uno que fundamente el enfoque STEAMS y finalmente otro que fundamente el enfoque de Aprendizaje Basado en Problemas y Proyectos (ABPP)</p></li>
+</ol>
+<p>Pero  que este diseño sea para que el estudiante pueda aprender experimentando en cuadernos Jupyter con funciones de usuario y animaciones y visualizaciones en Python.</p>
+<p>En particular utiliza para el diseño de clase a Numpy, Pandas, SymPy, Matplotlib.pyplot, Seaborn, Plotly, ipywidgets, matplotlib.animation y Jupyter Notebook.</p>
+<p>Cada vez que utilices <code class="docutils literal notranslate"><span class="pre">matplotlib.animacion</span></code> no olvides incluir el uso de <code class="docutils literal notranslate"><span class="pre">IPython.</span> <span class="pre">display</span></code> para la renderización de estas animaciones a través de Jupyter Notebook.</p>
+<p>No olvides darme los diseños de clase con las ecuaciones matemáticas delimitadas con signo de dólar $ para que VS Code si me renderice estas expresiones del lenguaje latex. Cuando vallas a utilizar ipywidgets ten en cuenta la siguiente importación inicial para garantizar que la visualización interactiva si se renderice en VS Code:</p>
+<p>import numpy as np<br />
+import matplotlib.pyplot as plt<br />
+import ipywidgets as widgets<br />
+from IPython.display import display, clear_output<br />
+from matplotlib.patches import Rectangle</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="configuracion-inicial-para-visualizacion-estatica">
+<h1>Configuración inicial para visualización estática<a class="headerlink" href="#configuracion-inicial-para-visualizacion-estatica" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="estructura-de-la-clase">
+<h1>Estructura de la clase<a class="headerlink" href="#estructura-de-la-clase" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="diseno-de-clase-sumas-izquierdas-de-riemann-con-enfoque-steams-aula-invertida-y-abpp">
+<h1>Diseño de Clase: Sumas Izquierdas de Riemann con Enfoque STEAMS, Aula Invertida y ABPP<a class="headerlink" href="#diseno-de-clase-sumas-izquierdas-de-riemann-con-enfoque-steams-aula-invertida-y-abpp" title="Link to this heading">#</a></h1>
+<section id="titulo-de-la-clase">
+<h2>1. Título de la Clase<a class="headerlink" href="#titulo-de-la-clase" title="Link to this heading">#</a></h2>
+<p><strong>“Descubriendo el área bajo la curva: Sumas Izquierdas de Riemann a través de la experimentación en Python”</strong></p>
+</section>
+<section id="objetivos-de-aprendizaje-e-indicadores">
+<h2>2. Objetivos de Aprendizaje e Indicadores<a class="headerlink" href="#objetivos-de-aprendizaje-e-indicadores" title="Link to this heading">#</a></h2>
+<p><strong>Objetivos:</strong></p>
+<ul class="simple">
+<li><p>Comprender el concepto de integración numérica mediante Sumas Izquierdas de Riemann</p></li>
+<li><p>Aplicar el método para aproximar áreas bajo curvas en problemas reales</p></li>
+<li><p>Implementar algoritmos computacionales para cálculo de áreas</p></li>
+<li><p>Analizar la precisión de la aproximación en función del número de rectángulos</p></li>
+</ul>
+<p><strong>Indicadores de logro:</strong></p>
+<ul class="simple">
+<li><p>El estudiante representa gráficamente el método de Sumas Izquierdas de Riemann</p></li>
+<li><p>Calcula manualmente áreas aproximadas usando el método</p></li>
+<li><p>Programa funciones en Python que implementen el método</p></li>
+<li><p>Compara resultados numéricos con soluciones analíticas</p></li>
+<li><p>Diseña experimentos para determinar el número óptimo de rectángulos</p></li>
+</ul>
+</section>
+<section id="mapa-conceptual-graphviz">
+<h2>3. Mapa Conceptual (Graphviz)<a class="headerlink" href="#mapa-conceptual-graphviz" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">graphviz</span><span class="w"> </span><span class="kn">import</span> <span class="n">Digraph</span>
+
+<span class="c1"># Crear el gráfico</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="s1">&#39;Riemann&#39;</span><span class="p">,</span> 
+                <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;C:/Users/marco/Downloads/riemann_sum_left.gv&#39;</span><span class="p">,</span>
+                <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;png&#39;</span><span class="p">,</span>
+                <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;neato&#39;</span><span class="p">)</span>
+
+<span class="c1"># Configuración para evitar overlaps</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;graph&#39;</span><span class="p">,</span> <span class="n">overlap</span><span class="o">=</span><span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="n">splines</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="s1">&#39;neato&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nodos principales</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;ellipse&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue2&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;Sumas Izquierdas de Riemann&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;Integración Numérica&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Área bajo la curva&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nodos secundarios</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;rounded,filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gold&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;Partición del intervalo&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;Altura = f(x_i)&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;Ancho = Δx&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;Suma de áreas&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nodos aplicaciones</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;hexagon&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkolivegreen3&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;Cálculo de áreas irregulares&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;Trabajo en física&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;Probabilidades en estadística&#39;</span><span class="p">)</span>
+
+<span class="c1"># Nodos tecnológicos</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;component&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;filled&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;coral&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;Implementación en Python&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;Visualización con Matplotlib&#39;</span><span class="p">)</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;Animaciones interactivas&#39;</span><span class="p">)</span>
+
+<span class="c1"># Conexiones</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">([</span><span class="s1">&#39;AB&#39;</span><span class="p">,</span> <span class="s1">&#39;AC&#39;</span><span class="p">,</span> <span class="s1">&#39;AD&#39;</span><span class="p">,</span> <span class="s1">&#39;AE&#39;</span><span class="p">,</span> <span class="s1">&#39;AF&#39;</span><span class="p">,</span> <span class="s1">&#39;AG&#39;</span><span class="p">])</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">([</span><span class="s1">&#39;BD&#39;</span><span class="p">,</span> <span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="s1">&#39;BF&#39;</span><span class="p">,</span> <span class="s1">&#39;BG&#39;</span><span class="p">])</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">([</span><span class="s1">&#39;CH&#39;</span><span class="p">,</span> <span class="s1">&#39;CI&#39;</span><span class="p">,</span> <span class="s1">&#39;CJ&#39;</span><span class="p">])</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">([</span><span class="s1">&#39;DK&#39;</span><span class="p">,</span> <span class="s1">&#39;DL&#39;</span><span class="p">,</span> <span class="s1">&#39;DM&#39;</span><span class="p">])</span>
+
+<span class="c1"># Renderizar y mostrar</span>
+<span class="n">graph</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">view</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="historia-y-epistemologia-cuento-antioqueno">
+<h2>4. Historia y Epistemología (Cuento Antioqueño)<a class="headerlink" href="#historia-y-epistemologia-cuento-antioqueno" title="Link to this heading">#</a></h2>
+<p><em>“¡Ave María pues!</em> Les voy a contar la historia de un alemán terco como una mula que se empeñó en medir lo imposible: Bernhard Riemann.</p>
+<p>Este muchacho, <em>¡qué bárbaro!</em>, allá por 1854 se puso a pensar en cómo medir áreas raras, esas que no son triángulos ni cuadrados, sino las que hacen las curvas cuando bailan sobre el plano.</p>
+<p><em>¡Uy!</em> Y no estaba solo en esto. Antes que él, otro loco lindo, Augustin-Louis Cauchy, <em>¡ese sí que era echado pa’lante!</em>, ya había empezado a jugar con estas ideas. Pero Riemann las organizó mejor que una dueña de casa antioqueña ordenando su cocina.</p>
+<p><em>Miren pues</em> cómo era la cosa: Imagínense que tienen un terreno con forma rara, como esos cafetales en las montañas de Antioquia. Para medirlo, Riemann dijo: <em>“Partámoslo en cachitos rectangulares, como si fueran tablitas de un piso, y sumémoslos”</em>.</p>
+<p><em>¡Ajá!</em> Y así nació la idea de las sumas que llevan su nombre. Pero aquí viene lo bueno: entre más finitas las tablitas, más exacta la medida. <em>¡Eso es pura matemática, mijito!</em></p>
+<p><em>¿Y saben qué?</em> Hoy usamos estas ideas para todo: desde predecir el clima hasta diseñar celulares. <em>¡Eso sí que es progreso!</em>”</p>
+<p><strong>Imágenes históricas:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Bernhard_Riemann.jpeg">Bernhard Riemann</a></p></li>
+<li><p><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/5/53/Augustin-Louis_Cauchy_1901.jpg">Augustin-Louis Cauchy</a></p></li>
+</ul>
+</section>
+<section id="contenido-de-la-clase-situacion-real">
+<h2>5. Contenido de la Clase (Situación Real)<a class="headerlink" href="#contenido-de-la-clase-situacion-real" title="Link to this heading">#</a></h2>
+<p><strong>Situación Problema:</strong>
+Un ingeniero ambiental necesita calcular el área contaminada por un derrame de petróleo en un lago. La forma del derrame es irregular y sigue aproximadamente la función f(x) = x³ - 2x² + 5 entre x=0 y x=2.</p>
+<p><strong>Desarrollo:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Planteamiento del problema:</strong></p>
+<ul class="simple">
+<li><p>¿Cómo medir un área con bordes curvos?</p></li>
+<li><p>Necesidad de aproximación</p></li>
+</ul>
+</li>
+<li><p><strong>Solución intuitiva:</strong></p>
+<ul class="simple">
+<li><p>Dividir el área en rectángulos delgados</p></li>
+<li><p>Sumar las áreas de estos rectángulos</p></li>
+</ul>
+</li>
+<li><p><strong>Construcción del modelo:</strong></p>
+<ul class="simple">
+<li><p>Partición del intervalo [a,b] en n subintervalos</p></li>
+<li><p>Ancho de cada rectángulo: Δx = (b-a)/n</p></li>
+<li><p>Altura: valor de la función en el extremo izquierdo</p></li>
+<li><p>Área total ≈ Σ f(x_i) * Δx, desde i=0 hasta n-1</p></li>
+</ul>
+</li>
+<li><p><strong>Matematización:</strong>
+$<span class="math notranslate nohighlight">\( A \approx \sum_{i=0}^{n-1} f(x_i) \cdot \Delta x \)</span><span class="math notranslate nohighlight">\(
+donde:
+\)</span><span class="math notranslate nohighlight">\( \Delta x = \frac{b-a}{n}, \quad x_i = a + i \cdot \Delta x \)</span>$</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
+
+<span class="c1"># Descripción Gráfica del algoritmo de sumas de Riemann Izquierdas </span>
+
+<span class="c1"># Prompt: Dame una seguencia gráfica en forma de matriz con matplotlib donde: </span>
+<span class="c1"># 1. El primer gráfico presente a f(x) = x^{2} en el intervalo [1, 3]; </span>
+<span class="c1"># 2. En el segundo gráfico presente el primero agregando los puntos sobre el eje x definidos por </span>
+<span class="c1">#    la partición del dominio en n = 3 subintervalos; </span>
+<span class="c1"># 3. En el tercer gráfico incluyas al anterior gráfico solo resaltando los extremos izquierdos de cada subintervalo; </span>
+<span class="c1"># 4. En el cuarto gráfico, incluya al anterior y agreguele los segmentos verticales que representan la evaluación de la función f en los extremos izquierdos de los subintervalos; </span>
+<span class="c1"># 5. en el quinto gráfico incluye al anterior y agregándole los rectángulos asociados a cada subintervalo y cuya altura es la evaluación de la función f en el extremo izquierdo de cada subintervalo; </span>
+<span class="c1"># 6. El el sexto gráfico muestre ell gráfico anterior y la leyenda de la suma de las áreas de los rectángulos y el valor exacto de la integral de f en el dominio dado.   </span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Definir la función</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Intervalo y partición</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x_partition</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x_left</span> <span class="o">=</span> <span class="n">x_partition</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+
+<span class="c1"># Evaluaciones de la función</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y_left</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_left</span><span class="p">)</span>
+
+<span class="c1"># Calcular el área exacta</span>
+<span class="n">area_exacta</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Crear la figura y los subgráficos</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Primer gráfico: f(x) en el intervalo [1, 3]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;1. Gráfico de f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="c1"># Segundo gráfico: Agregar puntos de partición</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_partition</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x_partition</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Puntos de partición&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;2. Puntos de partición&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Tercer gráfico: Resaltar extremos izquierdos</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Extremos izquierdos&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;3. Extremos izquierdos&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Cuarto gráfico: Agregar segmentos verticales</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Extremos izquierdos&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;4. Segmentos verticales&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Quinto gráfico: Agregar rectángulos</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Extremos izquierdos&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">dx</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;edge&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Rectángulos&#39;</span> <span class="k">if</span> <span class="n">xi</span> <span class="o">==</span> <span class="n">x_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;5. Rectángulos&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Sexto gráfico: Agregar leyenda y área exacta</span>
+<span class="n">area_aproximada</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y_left</span> <span class="o">*</span> <span class="n">dx</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x) = x^2&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Extremos izquierdos&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span> <span class="n">y_left</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">dx</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;edge&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;6. Área aproximada y exacta&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Área aproximada: </span><span class="si">{</span><span class="n">area_aproximada</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">Área exacta: </span><span class="si">{</span><span class="n">area_exacta</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">))</span>
+
+<span class="c1"># Ajustar diseño</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/146ff7460f69966882a6b27afb122a837abd62c5f4b923dc7dde1b6af0d7082a.png" src="../_images/146ff7460f69966882a6b27afb122a837abd62c5f4b923dc7dde1b6af0d7082a.png" />
+</div>
+</div>
+</section>
+<section id="funcion-python-para-determinar-numero-de-rectangulos">
+<h2>6. Función Python para Determinar Número de Rectángulos<a class="headerlink" href="#funcion-python-para-determinar-numero-de-rectangulos" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">encontrar_n_rectangulos</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encuentra el número mínimo de rectángulos para alcanzar la precisión deseada</span>
+<span class="sd">    </span>
+<span class="sd">    Parámetros:</span>
+<span class="sd">    f : función a integrar</span>
+<span class="sd">    a, b : límites de integración</span>
+<span class="sd">    epsilon : precisión deseada</span>
+<span class="sd">    max_iter : máximo número de iteraciones permitidas</span>
+<span class="sd">    </span>
+<span class="sd">    Retorna:</span>
+<span class="sd">    n : número de rectángulos requeridos</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">integral_prev</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">converged</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter</span><span class="p">):</span>
+        <span class="c1"># Calcular suma de Riemann izquierda con n rectángulos</span>
+        <span class="n">delta_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Puntos izquierdos</span>
+        <span class="n">integral</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="n">delta_x</span><span class="p">)</span>
+        
+        <span class="c1"># Verificar convergencia</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">integral</span> <span class="o">-</span> <span class="n">integral_prev</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">epsilon</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">converged</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">break</span>
+            
+        <span class="n">integral_prev</span> <span class="o">=</span> <span class="n">integral</span>
+        <span class="n">n</span> <span class="o">*=</span> <span class="mi">2</span>  <span class="c1"># Duplicar rectángulos en cada iteración</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">converged</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Advertencia: No se alcanzó convergencia en el máximo de iteraciones&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># Devolver el n anterior al que duplicamos</span>
+
+<span class="c1"># Ejemplo de uso</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f_ejemplo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
+
+<span class="n">n_rect</span> <span class="o">=</span> <span class="n">encontrar_n_rectangulos</span><span class="p">(</span><span class="n">f_ejemplo</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Número de rectángulos necesarios: </span><span class="si">{</span><span class="n">n_rect</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="actividades-de-aprendizaje">
+<h2>7. Actividades de Aprendizaje<a class="headerlink" href="#actividades-de-aprendizaje" title="Link to this heading">#</a></h2>
+<p><strong>1. Prueba de Escritorio (Verbal):</strong></p>
+<ul class="simple">
+<li><p>Dada f(x) = x² en [0,2] con n=4</p></li>
+<li><p>Δx = (2-0)/4 = 0.5</p></li>
+<li><p>Puntos izquierdos: 0, 0.5, 1.0, 1.5</p></li>
+<li><p>Áreas: f(0)*0.5 = 0, f(0.5)*0.5 = 0.125, f(1.0)*0.5 = 0.5, f(1.5)*0.5 = 1.125</p></li>
+<li><p>Suma total = 0 + 0.125 + 0.5 + 1.125 = 1.75</p></li>
+</ul>
+<p><strong>2. Diagrama de Flujo:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Inicio]
+  ↓
+[Definir f(x), a, b, n]
+  ↓
+[Calcular Δx = (b-a)/n]
+  ↓
+[Inicializar suma = 0]
+  ↓
+[Para i de 0 a n-1]
+  ↓
+[Calcular x_i = a + i*Δx]
+  ↓
+[Sumar f(x_i)*Δx a suma]
+  ↓
+[Fin del ciclo]
+  ↓
+[Mostrar suma]
+  ↓
+[Fin]
+</pre></div>
+</div>
+<p><strong>3. Implementación en Python:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rectangle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">clear_output</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">riemann_izquierda</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">graficar</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la suma izquierda de Riemann y opcionalmente grafica los rectángulos</span>
+<span class="sd">    </span>
+<span class="sd">    Parámetros:</span>
+<span class="sd">    f : función a integrar (callable)</span>
+<span class="sd">    a, b : límites de integración</span>
+<span class="sd">    n : número de rectángulos</span>
+<span class="sd">    graficar : si es True, muestra la gráfica</span>
+<span class="sd">    </span>
+<span class="sd">    Retorna:</span>
+<span class="sd">    suma : aproximación de la integral</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">delta_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">x_left</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Puntos izquierdos</span>
+    
+    <span class="n">suma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x_left</span><span class="p">)</span> <span class="o">*</span> <span class="n">delta_x</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">graficar</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        
+        <span class="c1"># Graficar la función</span>
+        <span class="n">x_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x_fine</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># Graficar los rectángulos</span>
+        <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x_left</span><span class="p">:</span>
+            <span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">xi</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">delta_x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">xi</span><span class="p">),</span> 
+                            <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+        
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Suma Izquierda de Riemann para n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> rectángulos</span><span class="se">\n</span><span class="s1">Área aproximada: </span><span class="si">{</span><span class="n">suma</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x_fine</span><span class="p">))</span><span class="o">*</span><span class="mf">1.1</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">suma</span>
+
+<span class="c1"># Widget interactivo</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">interact_riemann</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)):</span>
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">riemann_izquierda</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">graficar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+<span class="n">widgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">interact_riemann</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Rectángulos:&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="cancion-poema-para-interiorizar-conceptos">
+<h2>8. Canción/Poema para Interiorizar Conceptos<a class="headerlink" href="#cancion-poema-para-interiorizar-conceptos" title="Link to this heading">#</a></h2>
+<p><strong>“La Cumbia de Riemann”</strong><br />
+<em>(Se canta con ritmo de cumbia colombiana)</em></p>
+<p><em>Un dos tres, Riemann va</em><br />
+<em>midiendo áreas con su método de verdad</em><br />
+<em>Con rectángulos a la izquierda</em><br />
+<em>la aproximación nunca se pierde</em></p>
+<p><em>Δx es el ancho</em><br />
+<em>f(x) es la altura</em><br />
+<em>la suma de todos</em><br />
+<em>te da la figura</em></p>
+<p><em>¡Ay! Cuanto más rectángulos tú pones</em><br />
+<em>más exacto será el cálculo que obtienes</em><br />
+<em>¡Eso es integración numérica, mi amor</em><br />
+<em>Riemann nos enseñó con su rigor!</em></p>
+</section>
+<section id="tareas-y-actividades-de-fijacion">
+<h2>9. Tareas y Actividades de Fijación<a class="headerlink" href="#tareas-y-actividades-de-fijacion" title="Link to this heading">#</a></h2>
+<p><strong>Ejercicios Básicos:</strong></p>
+<ol class="arabic simple">
+<li><p>Calcular manualmente la suma izquierda de Riemann para f(x) = 2x + 1 en [0,4] con n=4</p></li>
+<li><p>Programar una versión modificada que use puntos medios</p></li>
+<li><p>Comparar resultados con n=10, 100, 1000 para f(x) = sin(x) en [0,π]</p></li>
+</ol>
+<p><strong>Proyecto de Investigación:</strong></p>
+<ul class="simple">
+<li><p>Analizar cómo varía el error al cambiar n para diferentes funciones</p></li>
+<li><p>Crear una tabla comparativa entre métodos de Riemann izquierdo, derecho y medio</p></li>
+</ul>
+<p><strong>Desafío STEAM:</strong></p>
+<ul class="simple">
+<li><p>Modelar el área de un lago usando datos reales de su contorno</p></li>
+<li><p>Comparar con mediciones por satélite (Google Earth)</p></li>
+</ul>
+</section>
+<section id="evaluacion">
+<h2>10. Evaluación<a class="headerlink" href="#evaluacion" title="Link to this heading">#</a></h2>
+<p><strong>Proyectos:</strong></p>
+<ol class="arabic simple">
+<li><p>Calculadora visual de Riemann con interfaz interactiva</p></li>
+<li><p>Análisis de convergencia para funciones discontinuas</p></li>
+<li><p>Aplicación a cálculo de trabajo en física</p></li>
+<li><p>Estimación de probabilidades con distribuciones continuas</p></li>
+<li><p>Comparación con otros métodos numéricos (trapecios, Simpson)</p></li>
+<li><p>Integración en coordenadas polares</p></li>
+<li><p>Cálculo de volúmenes de revolución</p></li>
+<li><p>Aplicación a economía: cálculo de excedente del consumidor</p></li>
+<li><p>Modelado de crecimiento poblacional</p></li>
+<li><p>Simulación de acumulación de contaminantes</p></li>
+</ol>
+<p><strong>Ejemplo de Quiz:</strong></p>
+<ol class="arabic simple">
+<li><p>Defina con sus palabras el método de Sumas Izquierdas de Riemann</p></li>
+<li><p>Para f(x) = x² en [0,2] con n=4, calcule Δx y los puntos x_i</p></li>
+<li><p>¿Cómo afecta aumentar n a la precisión del resultado?</p></li>
+</ol>
+<p><strong>Ejemplo de Parcial:</strong></p>
+<ol class="arabic simple">
+<li><p>Demuestre que la suma de Riemann converge a la integral definida cuando n→∞</p></li>
+<li><p>Programe una función que calcule sumas derechas de Riemann</p></li>
+<li><p>Aplique el método para aproximar ∫(e^x)dx de 0 a 1 con error &lt; 0.001</p></li>
+</ol>
+</section>
+<section id="retroalimentacion">
+<h2>11. Retroalimentación<a class="headerlink" href="#retroalimentacion" title="Link to this heading">#</a></h2>
+<p><strong>Estrategias:</strong></p>
+<ul class="simple">
+<li><p>Rúbrica de autoevaluación con criterios claros</p></li>
+<li><p>Sesión de “Museo Matemático” donde los estudiantes exponen sus visualizaciones</p></li>
+<li><p>Taller de corrección entre pares con guía estructurada</p></li>
+<li><p>Video-feedback con comentarios sobre implementaciones Python</p></li>
+<li><p>Foro de discusión sobre errores comunes y soluciones</p></li>
+</ul>
+</section>
+<section id="vocabulario-en-ingles">
+<h2>12. Vocabulario en Inglés<a class="headerlink" href="#vocabulario-en-ingles" title="Link to this heading">#</a></h2>
+<p><strong>Términos clave:</strong></p>
+<ul class="simple">
+<li><p>Riemann Sum - Suma de Riemann</p></li>
+<li><p>Left Endpoint - Extremo izquierdo</p></li>
+<li><p>Partition - Partición</p></li>
+<li><p>Subinterval - Subintervalo</p></li>
+<li><p>Numerical Integration - Integración numérica</p></li>
+<li><p>Accuracy - Precisión</p></li>
+<li><p>Convergence - Convergencia</p></li>
+<li><p>Approximation - Aproximación</p></li>
+<li><p>Definite Integral - Integral definida</p></li>
+<li><p>Area under the curve - Área bajo la curva</p></li>
+</ul>
+<p><strong>Frases útiles:</strong></p>
+<ul class="simple">
+<li><p>“The left Riemann sum approaches the true area as n increases”</p></li>
+<li><p>“We partition the interval into n equal subintervals”</p></li>
+<li><p>“The approximation improves with finer partitions”</p></li>
+<li><p>“The error decreases as we use more rectangles”</p></li>
+<li><p>“Numerical methods provide approximate solutions to integrals”</p></li>
+</ul>
+</section>
+<section id="apendice-habilidades-blandas">
+<h2>13. Apéndice: Habilidades Blandas<a class="headerlink" href="#apendice-habilidades-blandas" title="Link to this heading">#</a></h2>
+<p><strong>Trabajo en Equipo:</strong></p>
+<ul class="simple">
+<li><p>Técnica “Puzzle” para asignar roles (experto en matemáticas, programador, visualizador)</p></li>
+<li><p>Rúbrica de coevaluación con criterios de colaboración</p></li>
+</ul>
+<p><strong>Inteligencia Emocional:</strong></p>
+<ul class="simple">
+<li><p>Taller “Errar es aprender” para normalizar errores en el proceso</p></li>
+<li><p>Técnicas de respiración para manejar ansiedad en evaluaciones</p></li>
+</ul>
+<p><strong>Tolerancia:</strong></p>
+<ul class="simple">
+<li><p>Foro de discusión sobre contribuciones matemáticas de diversas culturas</p></li>
+<li><p>Análisis de cómo diferentes enfoques (visual, numérico, analítico) enriquecen la comprensión</p></li>
+</ul>
+</section>
+<section id="referentes-en-didactica-apa">
+<h2>14. Referentes en Didáctica (APA)<a class="headerlink" href="#referentes-en-didactica-apa" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Duval, R. (2006). A cognitive analysis of problems of comprehension in a learning of mathematics. <em>Educational Studies in Mathematics</em>, <em>61</em>(1-2), 103-131. <a class="reference external" href="https://doi.org/10.1007/s10649-006-0400-z">https://doi.org/10.1007/s10649-006-0400-z</a></p></li>
+<li><p>Wing, J. M. (2006). Computational thinking. <em>Communications of the ACM</em>, <em>49</em>(3), 33-35. <a class="reference external" href="https://doi.org/10.1145/1118178.1118215">https://doi.org/10.1145/1118178.1118215</a></p></li>
+<li><p>Bergmann, J., &amp; Sams, A. (2012). <em>Flip your classroom: Reach every student in every class every day</em>. International Society for Technology in Education.</p></li>
+<li><p>Sanders, M. (2009). STEM, STEM education, STEMmania. <em>The Technology Teacher</em>, <em>68</em>(4), 20-26.</p></li>
+<li><p>Thomas, J. W. (2000). <em>A review of research on project-based learning</em>. Autodesk Foundation.</p></li>
+<li><p>Polya, G. (1945). <em>How to solve it</em>. Princeton University Press.</p></li>
+<li><p>Schoenfeld, A. H. (1985). <em>Mathematical problem solving</em>. Academic Press.</p></li>
+<li><p>Boaler, J. (2016). <em>Mathematical mindsets: Unleashing students’ potential through creative math, inspiring messages and innovative teaching</em>. John Wiley &amp; Sons.</p></li>
+<li><p>Hiebert, J., &amp; Grouws, D. A. (2007). The effects of classroom mathematics teaching on students’ learning. <em>Second handbook of research on mathematics teaching and learning</em>, <em>1</em>, 371-404.</p></li>
+<li><p>National Council of Teachers of Mathematics. (2000). <em>Principles and standards for school mathematics</em>. NCTM.</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="definicion-del-calendario-academico-para-los-diferentes-programas-de-pregrado-de-los-campus-regionalizados-correspondiente-al-primer-periodo-academico-del-ano-2025-asi">
+<h1>Definición del calendario académico para los diferentes programas de pregrado de los campus regionalizados, correspondiente al primer periodo académico del año 2025, así:<a class="headerlink" href="#definicion-del-calendario-academico-para-los-diferentes-programas-de-pregrado-de-los-campus-regionalizados-correspondiente-al-primer-periodo-academico-del-ano-2025-asi" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Límite evaluación del 40% 06 de abril de 2025</p></li>
+<li><p>Terminación de clases 08 de junio de 2025</p></li>
+<li><p>Exámenes finales 09 al 15 de junio de 2025</p></li>
+<li><p>Habilitación y validación 16 al 22 de junio de 2025</p></li>
+<li><p>Terminación oficial 23 de junio de 2025</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cursos-que-orienta-el-profesor-marco-julio-canas-campillo-en-2025">
+<h1>Cursos que orienta el profesor Marco Julio Cañas Campillo en 2025<a class="headerlink" href="#cursos-que-orienta-el-profesor-marco-julio-canas-campillo-en-2025" title="Link to this heading">#</a></h1>
+<ol class="arabic simple" start="4">
+<li><p>Cálculo Vectorial para Ingeniería Agropecuaria</p></li>
+<li><p>Análisis Numérico para Licenciatura en Matemáticas.</p></li>
+<li><p>Práctica Pedagógica V para Licenciatura en Educación Infantil</p></li>
+<li><p>Fundamentos de Lógica para Licenciatura en Matemáticas</p></li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="horario-de-clases-del-profesor-marco">
+<h1>Horario de clases del profesor Marco<a class="headerlink" href="#horario-de-clases-del-profesor-marco" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Lunes 8-12: Cálculo Vectorial</p></li>
+<li><p>Martes 8-12 M: Fundamentos de Aritmética.</p></li>
+<li><p>Miércoles 8 a 12 M: Fundamentos de la Lógica</p></li>
+<li><p>Jueves 2 a 6 PM: Desarrollo del pensamiento matemático en la infancia.</p></li>
+<li><p>Viernes 8 - 12 M: Desarrollo del pensamiento matemático en la infancia.</p></li>
+<li><p>Sábados 8-12 Asesorías y espacio para retroalimentación y apoyo al trabajo independiente.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="horarios-de-monitoria-y-asesoria">
+<h1>Horarios de monitoría y asesoría<a class="headerlink" href="#horarios-de-monitoria-y-asesoria" title="Link to this heading">#</a></h1>
+<p>Coordinador de los cursos de la Facultad de Educación para regiones:</p>
+<p>Andrés Vélez: <a class="reference external" href="mailto:regioneducacion&#46;fedu&#37;&#52;&#48;udea&#46;edu&#46;co">regioneducacion<span>&#46;</span>fedu<span>&#64;</span>udea<span>&#46;</span>edu<span>&#46;</span>co</a><br />
+Coordinador Regiones<br />
+Facultad de Educación<br />
+Universidad de Antioquia</p>
+<section id="monitor-manuel-san-juan-serrano">
+<h2>Monitor Manuel San Juan Serrano<a class="headerlink" href="#monitor-manuel-san-juan-serrano" title="Link to this heading">#</a></h2>
+<p>Contactar escribiendo al correo: <a class="reference external" href="mailto:manuel&#46;serrano1&#37;&#52;&#48;udea&#46;edu&#46;co">manuel<span>&#46;</span>serrano1<span>&#64;</span>udea<span>&#46;</span>edu<span>&#46;</span>co</a></p>
+<p>Martes y jueves de 8 - 12<br />
+Miércoles 10 - 12 y de 2 a 4 PM<br />
+Sábado: 8 - 12</p>
+</section>
+<section id="referentes">
+<h2>Referentes<a class="headerlink" href="#referentes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.academia.edu/42139251/CALCULO_I_DE_UNA_VARIABLE_Ron_Larson_Bruce_Edwards_Mc_Graw_Hill_9o_Edici%C3%B3n">CALCULO I DE UNA VARIABLE Ron Larson-Bruce Edwards. Mc Graw Hill. 9º Edición</a></p></li>
+<li><p><a class="reference external" href="https://bibliotecadigital.udea.edu.co/handle/10495/3010">Grajales Vanegas, L. M., Restrepo Estrada, C. E., Restrepo Ochoa, S. I., &amp; Ruíz De Villalba, F. (2015). Matemáticas I para las ciencias económicas.</a></p></li>
+<li><p>R. Duval y Semiosis y pensamiento humano, 2.ª ed. Cali, Colombia: Programa Editorial Universidad del Valle, 2017. [En línea]. Disponible en: <a class="reference external" href="https://programaeditorial.univalle.edu.co/gpd-semiosis-y-pensamiento-humano-9789587655278-63324cdb0f6b3.html">https://programaeditorial.univalle.edu.co/gpd-semiosis-y-pensamiento-humano-9789587655278-63324cdb0f6b3.html</a></p></li>
+<li><p><a class="reference internal" href="#chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.u-cursos.cl/ciencias/2011/1/MC110/1/material_docente/bajar?id_material=574722"><span class="xref myst">Aylwin, C. U. (2011). Lógica, conjuntos y números. Universidad de los Andes, Consejo de Publicaciones, Colección: Ciencias Básicas, Serie: Matemáticas.</span></a></p></li>
+<li><p><a class="reference internal" href="#chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://tanthiamhuat.wordpress.com/wp-content/uploads/2018/03/deeplearningwithpython.pdf"><span class="xref myst">Chollet, F. (2021). Deep learning with Python. Simon and Schuster.</span></a></p></li>
+<li><p><a class="reference external" href="https://github.com/marco-canas/calculo/blob/main/referents/1_precalculo_stewart/stewart_precalculo.pdf">Watson, S., Stewart, J., &amp; Redlin, L. (2009). Precálculo. Matemáticas para el cálculo.</a></p></li>
+<li><p><a class="reference external" href="https://github.com/marco-canas/calculo/blob/main/referents/purcell/purcell_calculo.pdf">Purcell, E. J., Varberg, D., &amp; Rigdon, S. E. (2007). Cálculo diferencial e integral. Pearson Educación.</a></p></li>
+<li><p><a class="reference external" href="https://udeaeduco-my.sharepoint.com/:b:/g/personal/marco_canas_udea_edu_co/EZgXZjAp8QxPqOAim2hs6LcBNPLGjSHf-xwYnUVYkwa04w?e=RZdTCy">stewart cálculo</a></p></li>
+<li><p><a class="reference external" href="https://unesdoc.unesco.org/ark:/48223/pf0000379949_spa">Recomendación de la UNESCO sobre ciencia abierta</a></p></li>
+<li><p><a class="reference external" href="https://openai.com/blog/chatgpt">chatGPT</a></p></li>
+<li><p><a class="reference internal" href="#chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://14.139.161.31/OddSem-0822-1122/Hands-On_Machine_Learning_with_Scikit-Learn-Keras-and-TensorFlow-2nd-Edition-Aurelien-Geron.pdf"><span class="xref myst">Géron, A. (2017). Hands-on machine learning with scikit-learn and tensorflow: Concepts. Tools, and Techniques to build intelligent systems.</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wesmckinney.com/book/">McKinney, W. (2012). Python for data analysis: Data wrangling with Pandas, NumPy, and IPython. “ O’Reilly Media, Inc.”.</a></p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="como-estudiante-encuentro-que">
+<h1>Como estudiante, encuentro que…<a class="headerlink" href="#como-estudiante-encuentro-que" title="Link to this heading">#</a></h1>
+<p>F: Mis Fortalezas son:<br />
+O: Mis Oportunidades son:<br />
+D: Mis Debilidades son:<br />
+A: Lo que Amenazas mi aprendizaje es:</p>
+<section id="evaluamos-al-profesor-marco-canas-aqui">
+<h2><a class="reference external" href="https://forms.office.com/Pages/ResponsePage.aspx?id=IefhmYRxjkmK_7KtTlPBwkanXIs1i1FEujpsZgO6dXpUREJPV1kxUk1JV1ozTFJIQVNIQjY5WEY3US4u">Evaluamos al profesor Marco Cañas Aquí</a><a class="headerlink" href="#evaluamos-al-profesor-marco-canas-aqui" title="Link to this heading">#</a></h2>
+</section>
+<section id="continue-su-aprendizaje-en-la-siguiente-clase-a-traves-del-siguiente-vinculo">
+<h2>Continue su aprendizaje en la siguiente clase a través del siguiente <a class="reference internal" href="#"><span class="xref myst">vínculo</span></a><a class="headerlink" href="#continue-su-aprendizaje-en-la-siguiente-clase-a-traves-del-siguiente-vinculo" title="Link to this heading">#</a></h2>
+</section>
+<section id="agradecimientos">
+<h2>Agradecimientos<a class="headerlink" href="#agradecimientos" title="Link to this heading">#</a></h2>
+<p>Doy gracias a Dios por la vida de mi Hijo Joseph Cañas Osorio y la madurez que ha alcanzado. Este hijo me enorgullece y me hace falta abrazarlo cada día.</p>
+<p>Y a mi esposa Yasmira Emperatriz Barboza Mogollón por su apoyo, orientación y acompañamiento.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="apendice-sobre-calendarios-y-coordinaciones">
+<h1>Apéndice sobre calendarios y coordinaciones<a class="headerlink" href="#apendice-sobre-calendarios-y-coordinaciones" title="Link to this heading">#</a></h1>
+<p>A continuación le envío el horario de la asignatura Cálculo Vectorial</p>
+<p>Días:<br />
+Lunes - Hora: 7:00 a 12:00M<br />
+Fechas:<br />
+Febrero: 10-17-24<br />
+Marzo: 3-10-17-31<br />
+Abril:7-21-28<br />
+Mayo:5-12-19</p>
+<p>Agradezco su apoyo, y si presenta alguna dificultad puede contactarme.</p>
+<p>Cordialmente,<br />
+Juan Felipe Rivera Hernández<br />
+Contacto: 3106314300</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="clase-de-analisis-numerico-los-martes-de-8-a-12-del-medio-dia">
+<h1>Clase de análisis numérico los Martes de 8 a 12 del medio día.<a class="headerlink" href="#clase-de-analisis-numerico-los-martes-de-8-a-12-del-medio-dia" title="Link to this heading">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">docs/intro.md</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><span class="xref myst">Video de apoyo a la lectura interactiva y experimental de este cuaderno</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vinculo-al-programa-del-curso"><span class="xref myst">Vínculo al programa del curso:  </span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principios-de-mi-labor-docente">Principios de mi labor docente</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelo-general-de-clase-aula-invertida">Modelo general de clase: aula invertida</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-aprendizaje-basado-en-problemas-y-proyectos-abpp">Metodología de Aprendizaje Basado en Problemas y Proyectos (ABPP)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#desarrollo-del-pensamiento-computacional-con-lenguajes-python-r-y-con-archivos-markdown-y-r-markdown-orientado-a-la-formacion-en-ciencia-de-datos">Desarrollo del pensamiento computacional con Lenguajes Python, R; y con archivos Markdown y R-Markdown orientado a la formación en ciencia de datos</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#principio-de-fomento-a-la-ciencia-abierta-ensenar-en-el-acceso-a-los-datos-publicos-y-el-uso-de-software-de-codigo-abierto">Principio de fomento a la ciencia abierta, enseñar en el acceso a los datos públicos y el uso de software de código abierto</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#que-estamos-haciendo-por-la-internalizacion-en-esta-clase-y-este-curso">Qué estamos haciendo por la internalización en esta clase y este curso</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-global-en-la-formacion-academica">1. <strong>Visión Global en la Formación Académica</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#innovacion-pedagogica-con-enfoque-internacional">2. <strong>Innovación Pedagógica con Enfoque Internacional</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnologia-y-herramientas-de-uso-global">3. <strong>Tecnología y Herramientas de Uso Global</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investigacion-y-publicaciones-internacionales">4. <strong>Investigación y Publicaciones Internacionales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uso-del-ingles-para-la-internacionalizacion">5. <strong>Uso del Inglés para la Internacionalización</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#certificaciones-y-estandares-internacionales">6. <strong>Certificaciones y Estándares Internacionales</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proyectos-abiertos-y-ciencia-reproducible">7. <strong>Proyectos Abiertos y Ciencia Reproducible</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participacion-en-redes-y-conferencias-internacionales">8. <strong>Participación en Redes y Conferencias Internacionales</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-ensenanza-aprendizaje-basado-en-problemas-y-proyectos-abpp"><strong>Metodología de Enseñanza: Aprendizaje Basado en Problemas y Proyectos (ABPP)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamentos-del-abpp"><strong>1. Fundamentos del ABPP</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-del-abpp-en-areas-especificas"><strong>2. Aplicación del ABPP en Áreas Específicas</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educacion-infantil-licenciatura-en-educacion-infantil"><strong>Educación Infantil (Licenciatura en Educación Infantil)</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#licenciatura-en-matematicas"><strong>Licenciatura en Matemáticas</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ingenieria-agropecuaria"><strong>Ingeniería Agropecuaria</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#administracion-de-empresas"><strong>Administración de Empresas</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beneficios-del-abpp"><strong>3. Beneficios del ABPP</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplo-general-de-implementacion"><strong>4. Ejemplo General de Implementación</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fomento-de-la-lectura-literaria-asociada-a-ingenieria-agropecuaria-y-licenciatura-en-matematicas">Fomento de la lectura literaria asociada a Ingeniería agropecuaria y licenciatura en Matemáticas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titulo-de-la-clase-sumas-de-riemann-izquierda">Título de la clase: Sumas de Riemann Izquierda</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-general-para-todas-las-clases">Estructura general para todas las clases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracion-inicial-para-visualizacion-estatica">Configuración inicial para visualización estática</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-de-la-clase">Estructura de la clase</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-clase-sumas-izquierdas-de-riemann-con-enfoque-steams-aula-invertida-y-abpp">Diseño de Clase: Sumas Izquierdas de Riemann con Enfoque STEAMS, Aula Invertida y ABPP</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titulo-de-la-clase">1. Título de la Clase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-de-aprendizaje-e-indicadores">2. Objetivos de Aprendizaje e Indicadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mapa-conceptual-graphviz">3. Mapa Conceptual (Graphviz)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historia-y-epistemologia-cuento-antioqueno">4. Historia y Epistemología (Cuento Antioqueño)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contenido-de-la-clase-situacion-real">5. Contenido de la Clase (Situación Real)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-python-para-determinar-numero-de-rectangulos">6. Función Python para Determinar Número de Rectángulos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividades-de-aprendizaje">7. Actividades de Aprendizaje</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cancion-poema-para-interiorizar-conceptos">8. Canción/Poema para Interiorizar Conceptos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tareas-y-actividades-de-fijacion">9. Tareas y Actividades de Fijación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion">10. Evaluación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retroalimentacion">11. Retroalimentación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vocabulario-en-ingles">12. Vocabulario en Inglés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apendice-habilidades-blandas">13. Apéndice: Habilidades Blandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referentes-en-didactica-apa">14. Referentes en Didáctica (APA)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-del-calendario-academico-para-los-diferentes-programas-de-pregrado-de-los-campus-regionalizados-correspondiente-al-primer-periodo-academico-del-ano-2025-asi">Definición del calendario académico para los diferentes programas de pregrado de los campus regionalizados, correspondiente al primer periodo académico del año 2025, así:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cursos-que-orienta-el-profesor-marco-julio-canas-campillo-en-2025">Cursos que orienta el profesor Marco Julio Cañas Campillo en 2025</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#horario-de-clases-del-profesor-marco">Horario de clases del profesor Marco</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#horarios-de-monitoria-y-asesoria">Horarios de monitoría y asesoría</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitor-manuel-san-juan-serrano">Monitor Manuel San Juan Serrano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referentes">Referentes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#como-estudiante-encuentro-que">Como estudiante, encuentro que…</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluamos-al-profesor-marco-canas-aqui">Evaluamos al profesor Marco Cañas Aquí</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continue-su-aprendizaje-en-la-siguiente-clase-a-traves-del-siguiente-vinculo">Continue su aprendizaje en la siguiente clase a través del siguiente <span class="xref myst">vínculo</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agradecimientos">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#apendice-sobre-calendarios-y-coordinaciones">Apéndice sobre calendarios y coordinaciones</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clase-de-analisis-numerico-los-martes-de-8-a-12-del-medio-dia">Clase de análisis numérico los Martes de 8 a 12 del medio día.</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Marco Cañas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

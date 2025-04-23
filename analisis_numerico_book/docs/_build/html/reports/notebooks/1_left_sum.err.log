@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\nbclient\client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\marco\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "c:\Users\marco\Documentos\docencia\analisis_numerico\.venv\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import numpy as np
+
+# Cargar la lista de estudiantes desde el archivo CSV
+path = 'C:/Users/marco/Documentos/docencia/groups_list/geometria.csv'
+estudiantes = pd.read_csv(path)
+estudiantes['Parcial'] = estudiantes['Parcial'].astype(float)  # Asegurar que la columna 'Parcial' es float
+
+# Convertir la columna 'Nombre' a una lista de Python
+lista_estudiantes = estudiantes['Nombre'].tolist()
+
+# Función para llamar a un estudiante aleatoriamente y registrar su nota de seguimiento
+def asistencia():
+    global lista_estudiantes
+    if lista_estudiantes:
+        estudiante_aleatorio = np.random.choice(lista_estudiantes)
+        print(f"Llamando a {estudiante_aleatorio}...")
+        asistencia = input(f"¿Asistió {estudiante_aleatorio}? (s/n): ").strip().lower()
+        
+        # Validación de entrada
+        if asistencia == 's':
+            # Obtener el índice del estudiante en el DataFrame
+            indice = estudiantes[estudiantes['Nombre'] == estudiante_aleatorio].index[0]
+            # Incrementar su valor en la columna 'Parcial'
+            estudiantes.at[indice, 'Parcial'] += 0.3
+            print(f"Actualizado: {estudiante_aleatorio} ahora tiene {estudiantes.at[indice, 'Parcial']} en la columna 'Parcial'.")
+        
+        elif asistencia != 'n':
+            print("Entrada inválida. Por favor, introduce 's' para sí o 'n' para no.")
+            return  # Volver a preguntar para el mismo estudiante si la entrada es inválida
+        
+        # Remover al estudiante de la lista para no llamarlo de nuevo
+        lista_estudiantes.remove(estudiante_aleatorio)
+    else:
+        print("Se han llamado a todos los estudiantes del grupo completo.")
+
+# Función para guardar cambios al final de la sesión
+def guardar_cambios():
+    estudiantes.to_csv(path, index=False)
+    print("Cambios guardados en el archivo CSV.")
+
+# Ejemplo de uso
+while lista_estudiantes:
+    asistencia()
+
+# Guardar los cambios una vez que todos los estudiantes hayan sido llamados
+guardar_cambios()
+
+
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mpd[39;00m
+[32m      2[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mnp[39;00m
+[32m      4[39m [38;5;66;03m# Cargar la lista de estudiantes desde el archivo CSV[39;00m
+
+[31mModuleNotFoundError[39m: No module named 'pandas'
+

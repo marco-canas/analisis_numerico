@@ -1,7 +1,0 @@
-# docs/_toc.yml
-format: jb-book
-root: intro
-chapters:
-- file: notebooks/sumas_riemann
-- file: notebooks/interpolacion
-- file: notebooks/derivacion_numerica

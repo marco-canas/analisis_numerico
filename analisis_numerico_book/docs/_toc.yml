@@ -1,0 +1,5 @@
+# docs/_toc.yml
+format: jb-book
+root: intro  # Nombre de tu archivo de introducción (sin extensión)
+chapters:
+- file: notebooks/1_left_sum  # Ruta a tu primer notebook (sin extensión)
