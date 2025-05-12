@@ -11,7 +11,7 @@
 
 Por cada semana de retrazo en la entrega del video, la valoración del trabajo se realiza por una unidad menos.  
 
-## Tareas asociadas al método de Newton (Fecha límite 15 de Mayo)
+## Tareas asociadas al método de Newton (Fecha límite 20 de Mayo)
 
 * una sola casilla en mares para tres videos:
     - Video de presentación del algoritmo de Newton en pizarra electrónica o tablero
