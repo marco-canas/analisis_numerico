@@ -5,8 +5,8 @@ Contiene:
 - Clase NewtonBiseccion: Implementa los métodos de Newton-Raphson y Bisección para encontrar raíces de funciones,
   con visualización gráfica y comparación de métodos.
 
-Autor: [Tu nombre]
-Fecha: [Fecha]
+Autor: Marco Julio Cañas Campillo
+Fecha: 27 de mayo de 2025 
 Versión: 1.0
 """
 
@@ -183,6 +183,6 @@ class NewtonBiseccion:
 
 
 # Ejemplo de uso (se puede descomentar para pruebas)
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # Crear instancia con función por defecto
     
