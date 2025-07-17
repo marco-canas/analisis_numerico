@@ -23,3 +23,6 @@ Por cada semana de retrazo en la entrega del video, la valoración del trabajo s
   * Hasta el 16 de mayo. 
 # Tareas sobre el método de simpson
   * Para el 27 de mayo. La descripción gráfica manúscrita del método de simpson. 
+
+
+Horario de Análisis Numérico 2025.2 Viernes 2 - 6 PM. 
