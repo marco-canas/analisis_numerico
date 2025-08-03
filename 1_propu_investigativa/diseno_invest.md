@@ -11,7 +11,7 @@
 - **Encuesta inicial:** Sobre habilidades en Python, uso de representaciones gráficas/algebraicas, y experiencia con Aula Invertida.  
 - **Análisis de carpetas 1-3:** Revisar *1_propu_investigativa* (antecedentes), *2_programa_curso* (planificación), y *3_formatos_clase* (estructura didáctica).  
 
-El diagnóstico lo debemos diseñar de acuerdo al libro guía que adoptaremos que es: [](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://librosoa.unam.mx/bitstream/handle/123456789/3416/MNPython.pdf?sequence=1&isAllowed=y)
+El diagnóstico lo debemos diseñar de acuerdo al libro guía que adoptaremos que es: [Jimenez Bedoya, Juan Carlos. Métodos numéricos usando Python con aplicaciones a la Ingeniería Química](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://librosoa.unam.mx/bitstream/handle/123456789/3416/MNPython.pdf?sequence=1&isAllowed=y)
 
 ---
 
