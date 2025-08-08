@@ -1,11 +1,11 @@
 # Prompt para el diseño de este cronograma
 
-Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el programa del curso, que te acabo adjuntar, y teniendo en cuenta que: 1. El curso es de 64 horas presenciales; 2. se realizaran 4 parciales de 2 horas, para un total de 8 horas de las 64 del curso; 3. Se realizarán 6 quices de media hora cada uno, para un total de 3 horas de las 56 horas que quedan después de restar las 8 de los parciales;  y que este cronograma debe ir de acuerdo al texto guía de Juan Carlos Jimenes Bedoya que encuentras en el siguiente vínculo chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://librosoa.unam.mx/bitstream/handle/123456789/3416/MNPython.pdf?sequence=1&isAllowed=y. Y ten en cuenta para este cronograma, que el curso empieza el viernes  8 de agosto de 2025 en el horario de 2 a 6 de la tarde, es decir, se darán 4 horas de clase por semana, de un total de 16 semanas para el curso. 
+Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el [programa del curso](https://github.com/marco-canas/analisis_numerico/blob/main/2_programa_curso/2_programa_curso_analisis_numerico.md), que te acabo adjuntar, y teniendo en cuenta que: 1. El curso es de 64 horas presenciales; 2. se realizaran 4 parciales de 2 horas, para un total de 8 horas de las 64 del curso; 3. Se realizarán 6 quices de media hora cada uno, para un total de 3 horas de las 56 horas que quedan después de restar las 8 de los parciales;  y que este cronograma debe ir de acuerdo al texto guía de Juan Carlos Jimenes Bedoya que encuentras en el siguiente vínculo chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://librosoa.unam.mx/bitstream/handle/123456789/3416/MNPython.pdf?sequence=1&isAllowed=y. Y ten en cuenta para este cronograma, que el curso empieza el viernes  8 de agosto de 2025 en el horario de 2 a 6 de la tarde, es decir, se darán 4 horas de clase por semana, de un total de 16 semanas para el curso. 
 
 
 # **Cronograma del Curso de Análisis Numérico**  
 **Metodología:** Aula Invertida + ABPP + STEAMS  
-**Texto Guía:** Jiménez Bedoya, J. C. *Métodos numéricos usando Python con aplicaciones a la Ingeniería Química*  
+**Texto Guía:** [Jiménez Bedoya, J. C. *Métodos numéricos usando Python con aplicaciones a la Ingeniería Química*](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://librosoa.unam.mx/bitstream/handle/123456789/3416/MNPython.pdf?sequence=1&isAllowed=y)  
 **Total Horas Presenciales:** 64 horas (48 horas de clase + 8 horas de parciales + 3 horas de quices + 5 horas de proyectos)  
 
 ---
@@ -13,7 +13,7 @@ Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el 
 ## **Distribución de Temas y Actividades**  
 | **Semana** | **Tema** (Según texto guía) | **Contenidos** | **Metodología** | **Evaluación** | **Horas** |  
 |------------|-----------------------------|----------------|-----------------|----------------|-----------|  
-| **1-2** | Introducción a Python y errores numéricos | - Sintaxis básica de Python (NumPy, Matplotlib).<br>- Tipos de errores: truncamiento, redondeo. | Aula invertida (videos + Jupyter Notebooks).<br>Taller práctico en clase. | Quiz 1 (Python básico). | 6 |  
+| **1-2** | Introducción a Python y errores numéricos | - Sintaxis básica de Python [(NumPy](https://github.com/ageron/handson-ml3/blob/main/tools_numpy.ipynb), [Matplotlib](https://github.com/ageron/handson-ml3/blob/main/tools_matplotlib.ipynb)).<br>- Tipos de errores: truncamiento, redondeo. | Aula invertida (videos + Jupyter Notebooks).<br>Taller práctico en clase. | Quiz 1 (Python básico). | 6 |  
 | **3-4** | Ceros de funciones | - Método de Bisección.<br>- Método de Newton-Raphson.<br>- Implementación en Python. | ABPP: Problema real (ej: equilibrio químico).<br>Representaciones de Duval (Gráfica/Algebraica). | Parcial 1 (Bisección + Newton). | 6 |  
 | **5-6** | Interpolación polinomial | - Lagrange y Newton.<br>- Aplicaciones en ingeniería (ajuste de datos). | STEAMS: Proyecto con datos climáticos.<br>Visualización con Matplotlib. | Quiz 2 (Interpolación). | 6 |  
 | **7-8** | Diferenciación numérica | - Diferencias finitas.<br>- Aplicaciones en física (velocidad/aceleración). | Aula invertida + Role-playing (estudiantes explican métodos). | Parcial 2 (Diferenciación). | 6 |  
