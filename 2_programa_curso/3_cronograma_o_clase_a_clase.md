@@ -13,9 +13,9 @@ Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el 
 ## **Distribución de Temas y Actividades**  
 | **Semana** | **Tema** (Según texto guía) | **Contenidos** | **Metodología** | **Evaluación** | **Horas** |  
 |------------|-----------------------------|----------------|-----------------|----------------|-----------|  
-| **1-2** | Introducción a Python y errores numéricos | - Sintaxis básica de Python [(NumPy](https://github.com/ageron/handson-ml3/blob/main/tools_numpy.ipynb), [Matplotlib](https://github.com/ageron/handson-ml3/blob/main/tools_matplotlib.ipynb)).<br>- Tipos de errores: truncamiento, redondeo. | Aula invertida (videos + Jupyter Notebooks).<br>Taller práctico en clase. | Quiz 1 (Python básico). | 6 |  
+| **1-2** | Introducción a Python y errores numéricos | - Sintaxis básica de Python [(NumPy](https://github.com/ageron/handson-ml3/blob/main/tools_numpy.ipynb), [Matplotlib](https://github.com/ageron/handson-ml3/blob/main/tools_matplotlib.ipynb)).<br>- [Tipos de errores: truncamiento, redondeo.](https://github.com/marco-canas/analisis_numerico/blob/main/4_planifica_implementa/1_conceptos_preliminares/1_conceptos_preliminares_python.ipynb) | Aula invertida (videos + Jupyter Notebooks).<br>Taller práctico en clase. | Quiz 1 (Python básico). | 6 |  
 | **3-4** | Ceros de funciones | - Método de Bisección.<br>- Método de Newton-Raphson.<br>- Implementación en Python. | ABPP: Problema real (ej: equilibrio químico).<br>Representaciones de Duval (Gráfica/Algebraica). | Parcial 1 (Bisección + Newton). | 6 |  
-| **5-6** | Interpolación polinomial | - Lagrange y Newton.<br>- Aplicaciones en ingeniería (ajuste de datos). | STEAMS: Proyecto con datos climáticos.<br>Visualización con Matplotlib. | Quiz 2 (Interpolación). | 6 |  
+| **5-6** | Ajuste de curvas por Interpolación polinomial o por Regresión | - Lagrange y Newton.<br>- Aplicaciones en ingeniería (ajuste de datos). | STEAMS: Proyecto con datos climáticos.<br>Visualización con Matplotlib. | Quiz 2 (Interpolación). | 6 |  
 | **7-8** | Diferenciación numérica | - Diferencias finitas.<br>- Aplicaciones en física (velocidad/aceleración). | Aula invertida + Role-playing (estudiantes explican métodos). | Parcial 2 (Diferenciación). | 6 |  
 | **9-10** | Integración numérica | - Trapecios y Simpson.<br>- Aplicaciones en ingeniería (áreas bajo curvas). | ABPP: Modelar caudal de ríos con integrales. | Quiz 3 (Integración). | 6 |  
 | **11-12** | Sistemas de ecuaciones lineales | - Método de Gauss.<br>- Método de Jacobi.<br>- Uso en redes eléctricas. | STEAMS: Proyecto con matrices (ej: flujo de tráfico). | Parcial 3 (Gauss + Jacobi). | 6 |  
@@ -27,7 +27,7 @@ Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el 
 ## **Detalle de Evaluaciones**  
 1. **Quices (6 total, 0.5 horas c/u):**  
    - Quiz 1: Python básico (Semana 2).  
-   - Quiz 2: Interpolación (Semana 6).  
+   - Quiz 2: Ajuste de curvas: Interpolación y Regresión (Semana 6).  
    - Quiz 3: Integración (Semana 10).  
    - Quiz 4: Ecuaciones diferenciales (Semana 14).  
    - Quiz 5-6: Temas aleatorios para repaso (Semanas 8 y 12).  
@@ -62,6 +62,6 @@ Dame el cronograma de este curso de "análisis numérico" teniendo en cuenta el 
 
 ## **Bibliografía Complementaria**  
 - Capítulos 1-6 del texto guía (Jiménez Bedoya).  
-- Videos de apoyo en el canal de YouTube del curso.  
+- Videos de apoyo en el canal de YouTube del curso. Puede acceder al canal del curso [aquí](https://www.youtube.com/watch?v=Bgitt8zFBmA&list=PLbk60veMSVKu5V2ohQD9ppqZ41EouI8Wo)  
 
 **Nota:** El cronograma sigue el enfoque multimodal (Duval + ABPP + STEAMS) y se ajusta a las 64 horas presenciales, integrando evaluación continua y aprendizaje activo.
