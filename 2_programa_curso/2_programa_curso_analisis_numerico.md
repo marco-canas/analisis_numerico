@@ -57,7 +57,7 @@ Se empleará Python en Jupyter Notebooks para la programación y análisis de lo
 
 ## EVALUACIÓN
 La evaluación se basará en:
-- **Talleres y proyectos individuales (20%)**
+- **Talleres y 4 proyectos individuales (20%)**
 - **Cuatro quices (20%)**
 - ** 2 Exposiciones y defensa de proyectos (30%) (Puede ser entregado en video publicado en un canal de YouTube)**
 - **Cuatro exámenes parciales (7.5%)**
