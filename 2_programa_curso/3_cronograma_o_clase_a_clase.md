@@ -22,7 +22,7 @@ Aquí tienes el **cronograma actualizado**:
 
 | **Fecha (Viernes)** | **Semana Académica** | **Tema**                                       | **Contenidos**                                        | **Metodología**                        | **Evaluación**                        | **Horas** |
 | ------------------- | -------------------- | ---------------------------------------------- | ----------------------------------------------------- | -------------------------------------- | ------------------------------------- | --------- |
-| 19-sep              | 5                    | Ajuste de curvas por Interpolación o Regresión | - Lagrange y Newton.<br>- Aplicaciones en ingeniería. | STEAMS: Proyecto con datos climáticos. |                                       | 4         |
+| 19-sep              | 5                    | Ajuste de curvas por Interpolación o Regresión | - Lagrange y Newton.<br>- Aplicaciones en ingeniería. | STEAMS: Proyecto con datos climáticos. |quiz 1 (Aplicación del Método de Newton)           | 4         |
 | 26-sep              | 6                    | Ajuste de curvas (continuación)                | - Visualización con Matplotlib.                       | Taller aplicado.                       | **Quiz 2 (Interpolación)**            | 4         |
 | 3-oct               | 7                    | Diferenciación numérica                        | - Diferencias finitas.<br>- Aplicaciones en física.   | Aula invertida + Role-playing.         |                                       | 4         |
 | 10-oct              | 8                    | Diferenciación numérica (profundización)       | - Implementación en Python.                           | Ejercicios colaborativos.              | **Parcial 2 (Diferenciación)**        | 4         |
