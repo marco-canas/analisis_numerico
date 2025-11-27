@@ -3,24 +3,24 @@
 
 ## INFORMACIÓN GENERAL
 
-**Unidad Académica:** Facultad de Educación
-**Programa académico al que pertenece:** Licenciatura en Matemáticas
-**Programa(s) académico(s) a los cuales se ofrece el curso:** Licenciatura en Matemáticas, Administración de Empresas, Ingeniería Agropecuaria (electiva), Física (aplicado).
-**Vigencia:** 2025-2
-**Código del curso:** 2096632
-**Nombre del curso:** Análisis Numérico
-**Tipo de curso:** Teórico-Práctico
-**Clase de curso:** Obligatorio
-**Características del curso:** Validable ☑ Habilitable ☑ Clasificable ☑
-**Modalidad educativa:** Presencial con uso de Tecnologías Digitales
+**Unidad Académica:** Facultad de Educación  
+**Programa académico al que pertenece:** Licenciatura en Matemáticas  
+**Programa(s) académico(s) a los cuales se ofrece el curso:** Licenciatura en Matemáticas, Administración de Empresas, Ingeniería Agropecuaria (electiva), Física (aplicado).  
+**Vigencia:** 2025-2  
+**Código del curso:** 2096632  
+**Nombre del curso:** Análisis Numérico  
+**Tipo de curso:** Teórico-Práctico  
+**Clase de curso:** Obligatorio  
+**Características del curso:** Validable ☑ Habilitable ☑ Clasificable ☑  
+**Modalidad educativa:** Presencial con uso de Tecnologías Digitales  
 
 **Pre-requisitos:** Precálculo, Cálculo Diferencial, Cálculo Integral, Cálculo Vectorial
 **Co-requisitos:** Ninguno
 **Número de créditos académicos:** 3
-**Horas semanales de interacción estudiante-profesor:** 4
-**Horas semanales de trabajo independiente:** 4
-**Horas de asesoría con el profesor:** 1
-**Horas totales del curso en el semestre:** 142
+**Horas semanales de interacción estudiante-profesor:** 4  
+**Horas semanales de trabajo independiente:** 4  
+**Horas de asesoría con el profesor:** 1  
+**Horas totales del curso en el semestre:** 142  
 
 ---
 
@@ -35,7 +35,6 @@ Este curso contribuye a la formación del futuro licenciado en matemáticas en l
   * **Física (Cinemática):** aplicación de métodos de diferenciación e integración para modelar movimiento (posición, velocidad, aceleración).
   * **Administración de Empresas:** aplicación de interpolación, regresión y optimización para análisis de datos, toma de decisiones y pronósticos.
 
----
 
 ## INTENCIONALIDADES FORMATIVAS
 
@@ -48,7 +47,6 @@ El curso busca desarrollar:
   * **Física (ej. caída libre, MRU, MRUV, oscilaciones).**
   * **Administración (ej. proyecciones de ventas, análisis de costos, optimización de inventarios).**
 
----
 
 ## APORTES DEL CURSO A LA FORMACIÓN INTEGRAL Y EN INVESTIGACIÓN
 
@@ -98,10 +96,10 @@ Cada tema incluirá implementaciones en Python con pruebas de escritorio para va
 
 ## METODOLOGÍA
 
-* **Aula Invertida:** Materiales previos + trabajo activo en clase.
-* **STEAMS:** Integración de matemáticas, computación, física y administración.
-* **Aprendizaje Basado en Problemas y Proyectos (ABPP):** Resolución de problemas contextualizados.
-* **Python en Jupyter Notebooks** como herramienta central.
+* **Aula Invertida:** Materiales previos + trabajo activo en clase.  
+* **STEAMS:** Integración de matemáticas, computación, física y administración.  
+* **Aprendizaje Basado en Problemas y Proyectos (ABPP):** Resolución de problemas contextualizados.  
+* **Python en Jupyter Notebooks** como herramienta central.  
 
 ---
 
@@ -168,6 +166,4 @@ Aprobado en Acta Número: \_\_\_, Fecha: \_\_\_
 1. Toda actividad evaluativa tiene fecha límite de entrega o realización.
 2. La entrega sin excusa válida (según reglamento UdeA) se califica sobre 3, si se entrega dentro de la semana siguiente.
 
----
 
-👉 Te pregunto: ¿quieres que este programa lo organice también en **tabla de semanas con fechas 2025-2** (como lo hicimos con el cronograma anterior) para que ya quede sincronizado con las clases de los viernes?
