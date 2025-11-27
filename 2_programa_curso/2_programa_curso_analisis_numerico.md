@@ -1,6 +1,3 @@
-Perfecto, Marco 🙌. Te propongo aquí el **programa actualizado para 2025-2**, con el ajuste que pides: **integrar explícitamente aplicaciones a Física (Cinemática)** y a **Administración de Empresas** (modelación y análisis de problemas administrativos).
-
----
 
 # PROGRAMA OFICIAL DE CURSO
 
